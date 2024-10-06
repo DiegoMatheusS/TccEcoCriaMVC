@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="~/css/style-sobre.css" asp-append-version="true" />
+  </head>
+  <body>
+    <main>
+      <section class="intro-section">
+        <img
+          src="~/img/conheca2.jpg"
+          alt="Conheça o EcoCria"
+          style="width: 100%"
+        />
+      </section>
+      <br /><br />
+
+      <section class="description">
+        <p>
+          Iniciado em 2024, projeto de TCC feito na ETEC Horácio Augusto da
+          Silveira - ECOCRIA. Com intuito de promover a reciclagem, prover informações
+          sobre, trazer informações importantes e locais de descartes.
+        </p>
+      </section>
+      <br />
+
+      <section class="objectives-section">
+        <div class="objective-item">
+          <img src="~/img/reciclagem3.png" alt="Reciclagem de Eletrônicos" />
+          <div class="objective-text">
+            <p>
+              Definir e realizar a gestão da logística reversa de produtos
+              eletroeletrônicos e eletrodomésticos pós-consumo no Brasil,
+              garantindo a destinação final adequada. É responsável pela
+              contratação, fiscalização e auditoria dos serviços prestados por
+              terceiros, para a implementação de sistemas coletivos de logística
+              reversa.
+            </p>
+          </div>
+        </div>
+        <br />
+        <div class="objective-item">
+          <img src="~/img/reciclagem2.png" alt="Logística Reversa" />
+          <div class="objective-text">
+            <p>
+              Tornar eficiente o acesso as informações geradas pelo sistema de logística
+              reversa compartilhado por todos os atores do ecossistema, buscando
+              a redução de custos operacionais/logísticos e a obtenção de
+              economia de escala.
+            </p>
+          </div>
+        </div>
+        <br />
+        <div class="objective-item">
+          <img src="~/img/reciclagem1.png" alt="Soluções Inovadoras" />
+          <div class="objective-text">
+            <p>
+              Disponibilizar informações sobre as operações de reciclagem, além
+              de propor soluções inovadoras, eficientes e eficazes, buscando as
+              melhores práticas.
+            </p>
+          </div>
+        </div>
+        <br />
+      </section>
+      <hr style="border: 3px solid #045002" />
+      <section class="mission-vision-values">
+        <div class="image-container">
+          <img src="~/img/imgvisaovalores.png" alt="Pessoas segurando plantas" />
+        </div>
+
+        <div class="buttons-container">
+          <button class="green-button" onclick="toggleContent('missao')">
+            MISSÃO <span>&#x25BC;</span>
+          </button>
+          <div class="content-box" id="missao" style="display: none">
+            <p>
+              Advertir a população a respeito da transformação de resíduos em
+              recursos, promovendo a sustentabilidade ambiental e econômica por
+              meio de soluções inovadoras e eficientes de reciclagem,
+              contribuindo para um futuro mais verde e limpo para as próximas
+              gerações.
+            </p>
+            <br />
+          </div>
+
+          <button class="green-button" onclick="toggleContent('visao')">
+            VISÃO <span>&#x25BC;</span>
+          </button>
+          <div class="content-box" id="visao" style="display: none">
+            <p>
+              Se tornar reconhecida pela excelência em gestão de informações de
+              resíduos e inovação tecnológica, inspirando a sociedade a adotar
+              práticas sustentáveis e a valorizar a economia circular.
+            </p>
+            <br />
+          </div>
+
+          <button class="green-button" onclick="toggleContent('valores')">
+            VALORES <span>&#x25BC;</span>
+          </button>
+          <div class="content-box" id="valores" style="display: none">
+            <p>
+              <strong>Sustentabilidade:</strong> Compromisso com a preservação
+              do meio ambiente e a promoção de práticas ecológicas.
+            </p>
+            <br />
+            <p>
+              <strong>Inovação:</strong> Busca constante por tecnologias e
+              métodos avançados que aprimorem a eficiência e a eficácia dos
+              processos de reciclagem.
+            </p>
+            <br />
+            <p>
+              <strong>Responsabilidade Social:</strong> Atuação ética e
+              responsável, promovendo o bem-estar das comunidades e
+              colaboradores envolvidos.
+            </p>
+            <br />
+            <p>
+              <strong>Segurança:</strong> Priorização da saúde e segurança de
+              todos os colaboradores, garantindo um ambiente de trabalho seguro
+              e saudável.
+            </p>
+            <br />
+            <p>
+              <strong>Transparência:</strong> Comunicação aberta e honesta com
+              todas as partes interessadas, assegurando confiança e
+              credibilidade.
+            </p>
+          </div>
+        </div>
+
+        <script>
+          function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+              content.style.display = "block";
+            } else {
+              content.style.display = "none";
+            }
+          }
+        </script>
+      </section>
+
+      <hr style="border: 3px solid #045002" />
+
+      <section class="contact-section">
+        <div class="contact-form">
+          <h2>Entrar em Contato com EcoCria</h2>
+          <form action="#" method="POST">
+            <div class="input-group">
+              <label for="nome">Nome*</label>
+              <input type="text" id="nome" name="nome" required />
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="input-group">
+              <label for="telefone">Telefone / Celular*</label>
+              <input type="tel" id="telefone" name="telefone" required />
+            </div>
+
+            <div class="input-group">
+              <label for="cidade">Cidade*</label>
+              <input type="text" id="cidade" name="cidade" required />
+            </div>
+
+            <div class="input-group">
+              <label for="uf">UF*</label>
+              <select id="uf" name="uf" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+                <option value="MG">MG</option>
+                <!-- Adicione mais estados aqui -->
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="assunto">Assunto*</label>
+              <select id="assunto" name="assunto" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="Duvida">Dúvida</option>
+                <option value="Sugestao">Sugestão</option>
+                <option value="Reclamacao">Reclamação</option>
+                <!-- Adicione mais opções aqui -->
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="mensagem">Mensagem*</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">ENVIAR</button>
+          </form>
+        </div>
+
+        <div class="contact-image">
+          <img
+            src="~/img/imagem-smartphone.png.png"
+            alt="Imagem de smartphone com o site EcoCria"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

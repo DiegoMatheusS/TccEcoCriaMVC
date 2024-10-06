@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style-home.css" asp-append-version="true" />
+    <link rel="icon" href="~/img/ecocriaimg.png">
+    <script src="js/buttons.js"></script>
+   
+</head>
+<style>
+    
+</style>
+<body>
+
+    <main>
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+              <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
+              <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+              <img src="~/img/whats1.jpeg" alt="Slide 3">
+              <img src="~/img/whats2.jpeg" alt="Slide 4">
+              <img src="~/img/whats3.jpeg" alt="Slide 5">
+            </div>
+          
+            <div class="carousel-controls">
+              <button id="prevBtn">&#10094;</button>
+              <button id="nextBtn">&#10095;</button>
+            </div>
+          
+            <div class="carousel-indicators" id="carouselIndicators">
+              <button data-slide="0" class="active"></button>
+              <button data-slide="1"></button>
+              <button data-slide="2"></button>
+              <button data-slide="3"></button>
+              <button data-slide="4"></button>
+            </div>
+          </div>
+          
+          <hr style="border: 3px solid #045002;"> 
+          <section class="intro-section">
+            
+        <!-- Seção de Escolha de Material -->
+            <div class="discard-section" >
+              <h2>QUER DESCARTAR?</h2>
+              <div class="discard-form">
+                  <div class="input-group">
+                      <span>CEP</span>
+                      <input type="text" placeholder="____-___">
+                  </div>
+                  <div class="input-group">
+                      <span>Produto</span>
+                      <select>
+                          <option>selecione o produto</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+        </section>
+       
+        <hr style="border: 3px solid #045002;">
+
+        <div class="container">
+          <h2>Escolha o tipo de material que deseja reciclar</h2>
+          <div class="materials">
+              <div class="material">
+                  <img src="~/img/papel.png" alt="Papel">
+                  <span>PAPEL</span>
+              </div>
+              <div class="material">
+                  <img src="~/img/plastico.png" alt="Plástico">
+                  <span>PLÁSTICO</span>
+              </div>
+              <div class="material">
+                  <img src="~/img/metal.png" alt="Metal">
+                  <span>METAL</span>
+              </div>
+              <div class="material">
+                  <img src="~/img/oleo.png" alt="Óleo">
+                  <span>ÓLEO</span>
+              </div>
+              <div class="material">
+                  <img src="~/img/vidro.png" alt="Vidro">
+                  <span>VIDRO</span>
+              </div>
+              <div class="material">
+                  <img src="~/img/aluminio.png" alt="Alumínio">
+                  <span>ALUMÍNIO</span>
+              </div>
+          </div>
+      </div>
+
+
+
+          <script>
+            const carousel = document.getElementById('carousel');
+            const indicators = document.getElementById('carouselIndicators').children;
+            let currentIndex = 0;
+            const totalSlides = carousel.children.length;
+          
+            document.getElementById('prevBtn').addEventListener('click', () => {
+              currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+              updateCarousel();
+            });
+          
+            document.getElementById('nextBtn').addEventListener('click', () => {
+              currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+              updateCarousel();
+            });
+          
+            for (let i = 0; i < indicators.length; i++) {
+              indicators[i].addEventListener('click', () => {
+                currentIndex = i;
+                updateCarousel();
+              });
+            }
+          
+            // Função para atualizar o carrossel
+            function updateCarousel() {
+              carousel.style.transform = `translateX(${-currentIndex * 100}%)`;
+              for (let i = 0; i < indicators.length; i++) {
+                indicators[i].classList.remove('active');
+              }
+              indicators[currentIndex].classList.add('active');
+            }
+          
+            // Adicionando a transição automática a cada 5 segundos
+            setInterval(() => {
+              currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+              updateCarousel();
+            }, 5000); // 5000 milissegundos = 5 segundos
+          
+          </script>
+
+          
+        
+          
+
+    </main>
+</body>
+
+
+
+</html>

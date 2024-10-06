@@ -1,0 +1,662 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+  height: 100%;
+  min-height: 100vh;
+}
+
+main {
+  background-color: #fff;
+  flex: 1;
+}
+
+.intro-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e3f4dc;
+}
+
+.intro-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.description {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.description p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 auto;
+  max-width: 800px;
+  font-weight: bold; /* Aplica o negrito */
+}
+
+.objectives-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.objective-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.objective-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  padding-right: 10px;
+}
+
+.objective-text p {
+  color: #333;
+  font-size: 1rem;
+  text-align: justify;
+  font-weight: bold; /* Aplica o negrito */
+}
+
+.mission-vision-values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #e8f5e9; /* Cor clara de fundo */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0.5;
+}
+
+.green-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #77c043;
+  color: white;
+  border: 2px solid #77c043;
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.green-button:hover {
+  background-color: white;
+  color: #77c043;
+}
+
+.green-button span {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.content-box {
+  margin-top: 20px;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/*---------------------última parte sobre ------------------------*/
+
+.contact-section {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.contact-form {
+  flex: 1; /* Permite que o formulário utilize o espaço disponível */
+  max-width: 500px; /* Define uma largura máxima para o formulário */
+  margin: 0 20px; /* Margens laterais para espaçamento */
+}
+
+.contact-form h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o texto dentro do input */
+}
+
+.input-group label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #77c043;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%; /* Altera a largura para 100% do espaço do grupo */
+  max-width: 400px; /* Define uma largura máxima para inputs */
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  margin: 0 auto; /* Centraliza o input dentro do grupo */
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #77c043;
+  outline: none;
+}
+
+.submit-button {
+  display: block; /* Garante que o botão ocupe uma linha inteira */
+  background-color: #77c043;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 auto; /* Centraliza o botão */
+}
+
+.submit-button:hover {
+  background-color: #64a836;
+}
+
+.contact-image {
+  flex: 0.5;
+}
+
+.contact-image img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/*----------------------------------- Cabeçalho ---------------------------------------------------**/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #60c659;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #60c659;
+  padding: 5px 10px;
+  border: 1px solid #60c659;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #60c659;
+  color: white;
+}
+
+.social-media a {
+  margin-left: 15px;
+}
+
+.social-media img {
+  width: 20px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.social-media img:hover {
+  filter: grayscale(0%);
+}
+
+/*-------------------footer-----------------------*/
+
+.footer {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  text-align: center; /* Center the text */
+  padding: 10px; /* Add some padding */
+  font-family: Arial, sans-serif; /* Set a font */
+  font-size: 14px; /* Set the font size */
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75); /* Adding shadow effect */
+  justify-content: flex-end;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #00aeef; /* Blue color for links */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+/* teste responsividade
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Main content 
+main {
+  background-color: #fff;
+}
+
+/* Intro Section 
+.intro-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e3f4dc;
+  flex-direction: column; /* Adjusted for better stacking on mobile 
+}
+
+.intro-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.description {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.description p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 auto;
+  max-width: 800px;
+  font-weight: bold;
+}
+
+/* Objectives Section 
+.objectives-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.objective-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens 
+}
+
+.objective-item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  padding-right: 10px;
+}
+
+.objective-text p {
+  color: #333;
+  font-size: 1rem;
+  text-align: justify;
+  font-weight: bold;
+}
+
+/* Mission, Vision, Values Section 
+.mission-vision-values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #e8f5e9;
+  flex-wrap: wrap; /* Ensure elements stack on mobile 
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0.5;
+}
+
+.green-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #77c043;
+  color: white;
+  border: 2px solid #77c043;
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.green-button:hover {
+  background-color: white;
+  color: #77c043;
+}
+
+.green-button span {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.content-box {
+  margin-top: 20px;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Contact Section 
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #ffffff;
+  flex-wrap: wrap; /* Allow items to stack on smaller screens 
+}
+
+.contact-form {
+  flex: 1;
+  margin-right: 50px;
+  width: 100%;
+}
+
+.contact-form h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #77c043;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #77c043;
+  outline: none;
+}
+
+.submit-button {
+  background-color: #77c043;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #64a836;
+}
+
+.contact-image {
+  flex: 0.5;
+  width: 100%;
+}
+
+.contact-image img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/* Header 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #60c659;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #60c659;
+  padding: 5px 10px;
+  border: 1px solid #60c659;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #60c659;
+  color: white;
+}
+
+.social-media a {
+  margin-left: 15px;
+}
+
+.social-media img {
+  width: 20px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.social-media img:hover {
+  filter: grayscale(0%);
+}
+
+/* Footer 
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #00aeef;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/*------------------------- Media Queries for Responsiveness -----------------------
+
+@media (max-width: 768px) {
+  .intro-section, .mission-vision-values {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .buttons-container {
+      width: 100%;
+  }
+
+  .objective-item, .contact-section {
+      flex-direction: column;
+  }
+
+  .contact-form, .contact-image {
+      margin: 0;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  nav ul li a {
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .green-button {
+      font-size: 0.8rem;
+      padding: 10px 15px;
+  }
+
+  .submit-button {
+      padding: 10px 20px;
+  }
+}
+*/

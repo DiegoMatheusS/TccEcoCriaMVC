@@ -1,0 +1,131 @@
+<!--Namespace da classe de Modelo-->
+@model EcoCriaMVC.Models.Usuario
+
+<!--Título da View-->
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<!--Configuração de mensagem temporária-->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<!-- Estilos customizados para o layout de cadastro -->
+<style>
+    .register-container {
+        background-color: #4CAF50;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 400px; /* Ajuste para acomodar mais campos */
+        text-align: center;
+        margin: auto; /* Centraliza horizontalmente */
+    }
+
+    .register-container h2 {
+        color: white;
+    }
+
+    .register-container label {
+        color: white;
+        display: block;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+
+    .register-container input[type="text"],
+    .register-container input[type="password"],
+    .register-container input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .register-container .input-group {
+        display: flex;
+        justify-content: space-between; /* Espaça os campos lado a lado */
+    }
+
+    .register-container .input-group div {
+        flex: 1; /* Para igualar a largura dos campos */
+        margin-right: 5px; /* Margem entre os campos */
+    }
+
+    .register-container .input-group div:last-child {
+        margin-right: 0; /* Remove a margem do último campo */
+    }
+
+    .register-container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+        color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 15px; /* Adiciona margem para distanciar do campo anterior */
+    }
+
+    .register-container .input-group input {
+        margin-bottom: 0; /* Remove a margem inferior nos campos da input-group */
+    }
+
+    .small-text {
+        font-size: 12px; /* Define o tamanho da fonte */
+        color: white; /* Mantém a cor da fonte consistente */
+        margin-top: 15px; /* Espaço acima do texto */
+    }
+
+    .small-text a {
+        color: white; /* Cor do link */
+        text-decoration: underline; /* Sublinha o texto */
+    }
+
+    .small-text a:hover {
+        color: #2E7D32; /* Altera a cor ao passar o mouse */
+    }
+</style>
+
+<div class="register-container">
+    <h2>Criar Usuário</h2>
+    <hr />
+
+    <!-- Método que será chamado se o usuário fizer o Post -->
+    @using (Html.BeginForm("Registrar", "Usuarios", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="Email">Email</label>
+                @Html.EditorFor(model => model.EmailUsuario, new { htmlAttributes = new { @class = "form-control", @placeholder = "Digite seu email" } })
+            </div>
+            <div class="form-group">
+                <label for="PasswordString">Senha</label>
+                @Html.PasswordFor(model => model.PasswordUsuario, new { htmlAttributes = new { @class = "form-control", @placeholder = "Digite sua senha" } })
+            </div>
+            <div class="form-group input-group">
+                <div>
+                    <label for="Cep">CEP</label>
+                    @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @class = "form-control", @placeholder = "Digite seu CEP" } })
+                </div>
+                <div>
+                    <label for="NumeroCasa">N° da Casa</label>
+                    @Html.EditorFor(model => model.NumeroCasa, new { htmlAttributes = new { @class = "form-control", @placeholder = "N° da Casa" } })
+                </div>
+            </div>
+            <input type="submit" value="Cadastrar" class="btn btn-primary" />
+        </div>
+    }
+
+    <div class="small-text">
+        Possui login? <a href="@Url.Action("IndexLogin", "Usuarios")">Clique aqui!</a>
+    </div>
+</div>
