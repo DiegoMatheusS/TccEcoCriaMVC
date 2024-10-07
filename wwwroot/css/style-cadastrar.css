@@ -1,0 +1,77 @@
+.register-container {
+  background-color: #4CAF50;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Ajuste para acomodar mais campos */
+  text-align: center;
+  margin: auto; /* Centraliza horizontalmente */
+  margin-bottom: 95px;
+}
+
+.register-container h2 {
+  color: white;
+}
+
+.register-container label {
+  color: white;
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.register-container input[type="text"],
+.register-container input[type="password"],
+.register-container input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.register-container .input-group {
+  display: flex;
+  justify-content: space-between; /* Espaça os campos lado a lado */
+}
+
+.register-container .input-group div {
+  flex: 1; /* Para igualar a largura dos campos */
+  margin-right: 5px; /* Margem entre os campos */
+}
+
+.register-container .input-group div:last-child {
+  margin-right: 0; /* Remove a margem do último campo */
+}
+
+.register-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px; /* Adiciona margem para distanciar do campo anterior */
+}
+
+.register-container .input-group input {
+  margin-bottom: 0; /* Remove a margem inferior nos campos da input-group */
+}
+
+.small-text {
+  font-size: 12px; /* Define o tamanho da fonte */
+  color: white; /* Mantém a cor da fonte consistente */
+  margin-top: 15px; /* Espaço acima do texto */
+}
+
+.small-text a {
+  color: white; /* Cor do link */
+  text-decoration: underline; /* Sublinha o texto */
+}
+
+.small-text a:hover {
+  color: #2E7D32; /* Altera a cor ao passar o mouse */
+}

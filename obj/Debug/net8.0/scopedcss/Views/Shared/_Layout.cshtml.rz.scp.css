@@ -22,6 +22,7 @@ header[b-i1hkdqqldn] {
 .logo[b-i1hkdqqldn] {
   display: flex;
   align-items: center;
+  width: 10px;
 }
 
 .logo img[b-i1hkdqqldn] {
@@ -318,7 +319,7 @@ border: 5px solid #006eff;
   width: 100%;
   height: 50px;
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75); /* Adding shadow effect */
- 
+  margin: 0
 }
 
 .footer p[b-i1hkdqqldn] {
