@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Autenticar";
 }
-
+<link rel="stylesheet" href="~/css/style-autenticar.css" asp-append-version="true" />
 <!--Configuração de mensagem temporária-->
 @if (@TempData["Mensagem"] != null)
 {
@@ -18,70 +18,6 @@
         @TempData["MensagemErro"]
     </div>
 }
-
-
-<!-- Estilos customizados para o layout de login -->
-<style>
-
-    .login-container {
-        background-color: #4CAF50;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 400px; /* Ajuste para acomodar mais campos */
-        text-align: center;
-        margin: auto; /* Centraliza horizontalmente */
-    }
-
-    .login-container h2 {
-        color: white;
-    }
-
-    .login-container label {
-        color: white;
-        display: block;
-        text-align: left;
-        margin-bottom: 8px;
-    }
-
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: none;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-
-    .login-container input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        background-color: white;
-        color: #4CAF50;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    /* Mudança de cor ao passar o mouse sobre o botão */
-    .login-container input[type="submit"]:hover {
-        background-color: #2E7D32;
-        color: white;
-    }
-
-    .login-container .register-link {
-        display: block;
-        margin-top: 10px;
-        color: white;
-        text-decoration: none;
-    }
-
-    .login-container .register-link:hover {
-        text-decoration: underline;
-    }
-</style>
 
 <div class="login-container">
     <h2>Login do Usuário</h2>

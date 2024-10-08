@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EcoCriaMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ec07ed35e677588dfb84c58ad66655535242e87")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2579f20c92a106649ae9a10e506fc1ae78ceba3f")]
 [assembly: System.Reflection.AssemblyProductAttribute("EcoCriaMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EcoCriaMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

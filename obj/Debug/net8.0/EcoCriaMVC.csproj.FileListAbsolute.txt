@@ -34,3 +34,40 @@ C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\obj\Debug\net8.0\re
 C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.pdb
 C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.genruntimeconfig.cache
 C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\obj\Debug\net8.0\ref\EcoCriaMVC.dll
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\appsettings.Development.json
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\appsettings.json
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.staticwebassets.runtime.json
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.exe
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.deps.json
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.runtimeconfig.json
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.dll
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.pdb
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.csproj.AssemblyReference.cache
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.GeneratedMSBuildEditorConfig.editorconfig
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.AssemblyInfoInputs.cache
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.AssemblyInfo.cs
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.csproj.CoreCompileInputs.cache
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.MvcApplicationPartsAssemblyInfo.cache
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.RazorAssemblyInfo.cache
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.RazorAssemblyInfo.cs
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.sourcelink.json
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets.build.json
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets.development.json
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.EcoCriaMVC.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.build.EcoCriaMVC.props
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EcoCriaMVC.props
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EcoCriaMVC.props
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\scopedcss\bundle\EcoCriaMVC.styles.css
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\scopedcss\projectbundle\EcoCriaMVC.bundle.scp.css
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.csproj.Up2Date
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.dll
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\refint\EcoCriaMVC.dll
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.pdb
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.genruntimeconfig.cache
+D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\ref\EcoCriaMVC.dll
