@@ -7,16 +7,19 @@
   text-align: center;
   margin: auto; /* Centraliza horizontalmente */
   margin-bottom: 15%;
+  font-weight: bold;
 }
 
 .login-container h2 {
   color: white;
+  font-weight: bold;
 }
 
 .login-container label {
   color: white;
   display: block;
   text-align: left;
+  font-weight: bold;
   margin-bottom: 8px;
 }
 
@@ -32,6 +35,7 @@
 
 .login-container input[type="submit"] {
   width: 100%;
+  margin-top: 15px;
   padding: 10px;
   background-color: white;
   color: #4CAF50;
@@ -39,12 +43,15 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
 }
 
 /* Mudança de cor ao passar o mouse sobre o botão */
 .login-container input[type="submit"]:hover {
   background-color: #2E7D32;
   color: white;
+  text-transform: bold;
+  font-weight: bold;
 }
 
 .login-container .register-link {
@@ -52,8 +59,10 @@
   margin-top: 10px;
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .login-container .register-link:hover {
   text-decoration: underline;
+  font-weight: bold;
 }

@@ -11,6 +11,69 @@ body {
   
 
 }
+.hidden {
+  display: none;
+}
+
+
+/* Estilo para o dropdown de login */
+.login-dropdown {
+  display: inline-block;
+  position: absolute;
+  margin-left: 85%; /* Espaço entre o ícone de login e a mídia social */
+}
+
+.login-icon {
+  width: 40px;  /* Aumenta o tamanho do ícone de login */
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Esconde o dropdown por padrão */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: -20px; /* Move o dropdown mais para a esquerda */
+  top: 45px;    /* Desce o dropdown 5px abaixo do ícone */
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Quando a classe show é adicionada, o dropdown é mostrado */
+.login-dropdown.show .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.dropdown-content a:hover {
+  background-color: #2E7D32; 
+  color: white; 
+  font-weight: bold; 
+}
+
+/* Estilo adicional para o ícone de login */
+.login-dropdown img {
+  border-radius: 50%; /* Mantém o ícone circular */
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+/* Estilos para os ícones de mídia social */
+.social-media a {
+  margin-left: 10px;
+}
+
+
 
 header {
   display: flex;

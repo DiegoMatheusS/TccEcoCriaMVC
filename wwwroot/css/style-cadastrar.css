@@ -5,18 +5,22 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 400px; /* Ajuste para acomodar mais campos */
   text-align: center;
+  font-weight: bold;
   margin: auto; /* Centraliza horizontalmente */
   margin-bottom: 95px;
+
 }
 
 .register-container h2 {
   color: white;
+  font-weight: bold;
 }
 
 .register-container label {
   color: white;
   display: block;
   text-align: left;
+  font-weight: bold;
   margin-bottom: 8px;
 }
 
@@ -29,6 +33,7 @@
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
+  
 }
 
 .register-container .input-group {
@@ -49,27 +54,33 @@
   width: 100%;
   padding: 10px;
   background-color: white;
+  font-weight: bold;
   color: #4CAF50;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   margin-top: 15px; /* Adiciona margem para distanciar do campo anterior */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Suave transição */
 }
 
-.register-container .input-group input {
-  margin-bottom: 0; /* Remove a margem inferior nos campos da input-group */
+.register-container input[type="submit"]:hover {
+  background-color: #2E7D32; /* Verde escuro ao passar o mouse */
+  color: white; /* Letra branca ao passar o mouse */
 }
+
 
 .small-text {
   font-size: 12px; /* Define o tamanho da fonte */
   color: white; /* Mantém a cor da fonte consistente */
   margin-top: 15px; /* Espaço acima do texto */
+  font-weight: bold;
 }
 
 .small-text a {
   color: white; /* Cor do link */
   text-decoration: underline; /* Sublinha o texto */
+  font-weight: bold;
 }
 
 .small-text a:hover {

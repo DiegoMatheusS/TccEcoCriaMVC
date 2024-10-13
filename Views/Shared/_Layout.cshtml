@@ -19,15 +19,22 @@
                 <li><a href="@Url.Action("Sobre", "Home")">Sobre</a></li>
                 <li><a href="@Url.Action("Pontos", "PontosDeRecebimento")">Pontos de Recebimento</a></li>
                 <li><a href="#">Notícias</a></li>
-                <li><a href="@Url.Action("Index", "Usuarios")">Registrar-se</a></li>
-                <li><a href="@Url.Action("IndexLogin", "Usuarios")">Login</a></li>
             </ul>
         </nav>
+
+         <div class="login-dropdown">
+            <img src="~/img/pessoa.png" alt="Login" class="login-icon">
+        <div class="dropdown-content">
+            <a href="@Url.Action("Index", "Usuarios")">Registrar-se</a>
+            <a href="@Url.Action("IndexLogin", "Usuarios")">Login</a>
+        </div>
+        </div>
         <div class="social-media">
              <a href="#"><img src="~/img/linkedin.png" alt="LinkedIn"></a>
             <a href="#"><img src="~/img/facebook.png" alt="Facebook"></a> 
             <a href="#"><img src="~/img/instagram.png" alt="Instagram"></a> 
         </div>
+    </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">

@@ -11,7 +11,7 @@ namespace EcoCriaMVC.Controllers
 {
     public class UsuariosController : Controller
     {
-        public string uriBase = "enderecoaqui";
+        public string uriBase = "http://ecocria.somee.com/Usuarios/";
 
         [HttpGet]
         public IActionResult Index()
@@ -75,7 +75,7 @@ namespace EcoCriaMVC.Controllers
                     Usuario uLogado = JsonConvert.DeserializeObject<Usuario>(serialized);
                     HttpContext.Session.SetString("SessionTokenUsuario", uLogado.Token);
                     TempData["Mensagem"] = string.Format("Bem-Vindo {0}!!", uLogado.NomeUsuario);
-                    return RedirectToAction("index", "Personagens");
+                    return RedirectToAction("index", "Home");
                 }
                 else
                 {

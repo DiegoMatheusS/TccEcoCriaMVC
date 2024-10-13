@@ -71,3 +71,40 @@ D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\n
 D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.pdb
 D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.genruntimeconfig.cache
 D:\Diego_Matheus_3DS\3DS\TCC\TCC-ECOCRIA\TccEcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\ref\EcoCriaMVC.dll
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\appsettings.json
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.staticwebassets.runtime.json
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.exe
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.deps.json
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.runtimeconfig.json
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.dll
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.pdb
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.csproj.AssemblyReference.cache
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.AssemblyInfoInputs.cache
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.AssemblyInfo.cs
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.csproj.CoreCompileInputs.cache
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.RazorAssemblyInfo.cache
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.RazorAssemblyInfo.cs
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.sourcelink.json
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.EcoCriaMVC.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.build.EcoCriaMVC.props
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EcoCriaMVC.props
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EcoCriaMVC.props
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\scopedcss\bundle\EcoCriaMVC.styles.css
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\scopedcss\projectbundle\EcoCriaMVC.bundle.scp.css
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.csproj.Up2Date
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.dll
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\refint\EcoCriaMVC.dll
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.pdb
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.genruntimeconfig.cache
+C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\ref\EcoCriaMVC.dll
