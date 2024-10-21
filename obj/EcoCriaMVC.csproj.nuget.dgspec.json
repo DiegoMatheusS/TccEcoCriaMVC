@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj": {}
+    "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj": {
+    "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
+        "projectUniqueName": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
         "projectName": "EcoCriaMVC",
-        "projectPath": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
-        "packagesPath": "C:\\Users\\dmsdi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\obj\\",
+        "projectPath": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
+        "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
+        "outputPath": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dmsdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
