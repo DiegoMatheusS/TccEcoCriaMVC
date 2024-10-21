@@ -146,6 +146,8 @@
               content.style.display = "none";
             }
           }
+
+          
         </script>
       </section>
 
@@ -166,9 +168,21 @@
             </div>
 
             <div class="input-group">
-              <label for="telefone">Telefone / Celular*</label>
-              <input type="tel" id="telefone" name="telefone" required />
+              <label for="telefone">Celular*</label>
+              <input type="tel" id="telefone" maxlength="15" name="telefone" required placeholder="(XX) XXXXX-XXXX" />
             </div>
+
+            <script>
+              document.getElementById('telefone').addEventListener('input', function (e) {
+              let value = e.target.value
+                  .replace(/\D/g, '') // Remove caracteres não numéricos
+                  .replace(/^(\d{2})(\d)/, '($1) $2') // Formata DDD
+                  .replace(/(\d{5})(\d)/, '$1-$2') // Formata o número
+                  .replace(/(\s+|-)+$/, ''); // Remove espaços em branco ou traços no final
+
+              e.target.value = value; // Atualiza o valor do input
+          });
+            </script>
 
             <div class="input-group">
               <label for="cidade">Cidade*</label>

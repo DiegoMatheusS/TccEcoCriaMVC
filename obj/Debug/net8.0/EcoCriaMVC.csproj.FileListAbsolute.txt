@@ -108,3 +108,40 @@ C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\D
 C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.pdb
 C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.genruntimeconfig.cache
 C:\Users\dmsdi\OneDrive\Área de Trabalho\ECOCRIA\EcoCriaMVC\TccEcoCriaMVC\obj\Debug\net8.0\ref\EcoCriaMVC.dll
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\appsettings.Development.json
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\appsettings.json
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.staticwebassets.runtime.json
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.exe
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.deps.json
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.runtimeconfig.json
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.dll
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\EcoCriaMVC.pdb
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Erickson\tcc\TccEcoCriaMVC\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.csproj.AssemblyReference.cache
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.GeneratedMSBuildEditorConfig.editorconfig
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.AssemblyInfoInputs.cache
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.AssemblyInfo.cs
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.csproj.CoreCompileInputs.cache
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.MvcApplicationPartsAssemblyInfo.cache
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.RazorAssemblyInfo.cache
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.RazorAssemblyInfo.cs
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.sourcelink.json
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets.build.json
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets.development.json
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.EcoCriaMVC.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.build.EcoCriaMVC.props
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EcoCriaMVC.props
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EcoCriaMVC.props
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\scopedcss\bundle\EcoCriaMVC.styles.css
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\scopedcss\projectbundle\EcoCriaMVC.bundle.scp.css
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.csproj.Up2Date
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.dll
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\refint\EcoCriaMVC.dll
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.pdb
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\EcoCriaMVC.genruntimeconfig.cache
+D:\Erickson\tcc\TccEcoCriaMVC\obj\Debug\net8.0\ref\EcoCriaMVC.dll

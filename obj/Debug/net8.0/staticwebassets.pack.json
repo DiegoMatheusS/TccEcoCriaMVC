@@ -1,363 +1,391 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EcoCriaMVC.bundle.scp.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EcoCriaMVC.bundle.scp.css",
       "PackagePath": "staticwebassets\\EcoCriaMVC.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\css\\style-autenticar.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\css\\style-autenticar.css",
       "PackagePath": "staticwebassets\\css\\style-autenticar.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\css\\style-cadastrar.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\css\\style-cadastrar.css",
       "PackagePath": "staticwebassets\\css\\style-cadastrar.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\css\\style-home.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\css\\style-home.css",
       "PackagePath": "staticwebassets\\css\\style-home.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\css\\style-sobre.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\css\\style-sobre.css",
       "PackagePath": "staticwebassets\\css\\style-sobre.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\css\\style.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\favicon.ico",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\FIRSTIMG.jpg",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\ColetaSeletiva.png",
+      "PackagePath": "staticwebassets\\img\\ColetaSeletiva.png"
+    },
+    {
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\CuidarAmbiente1.png",
+      "PackagePath": "staticwebassets\\img\\CuidarAmbiente1.png"
+    },
+    {
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\FIRSTIMG.jpg",
       "PackagePath": "staticwebassets\\img\\FIRSTIMG.jpg"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\Rectangle 3.svg",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\LixoZero1.png",
+      "PackagePath": "staticwebassets\\img\\LixoZero1.png"
+    },
+    {
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\Reciclagem14.png",
+      "PackagePath": "staticwebassets\\img\\Reciclagem14.png"
+    },
+    {
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\Rectangle 3.svg",
       "PackagePath": "staticwebassets\\img\\Rectangle 3.svg"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\aluminio.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\aluminio.png",
       "PackagePath": "staticwebassets\\img\\aluminio.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\conheca.jpg",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\conheca.jpg",
       "PackagePath": "staticwebassets\\img\\conheca.jpg"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\conheca2.jpg",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\conheca2.jpg",
       "PackagePath": "staticwebassets\\img\\conheca2.jpg"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\ecocriaimg.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\ecocriaimg.png",
       "PackagePath": "staticwebassets\\img\\ecocriaimg.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\facebook.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\facebook.png",
       "PackagePath": "staticwebassets\\img\\facebook.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\imagem-smartphone.png.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\imagem-smartphone.png.png",
       "PackagePath": "staticwebassets\\img\\imagem-smartphone.png.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\imagemfirst.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\imagemfirst.png",
       "PackagePath": "staticwebassets\\img\\imagemfirst.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\imgvisaovalores.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\imgvisaovalores.png",
       "PackagePath": "staticwebassets\\img\\imgvisaovalores.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\instagram.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\instagram.png",
       "PackagePath": "staticwebassets\\img\\instagram.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\linkedin.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\linkedin.png",
       "PackagePath": "staticwebassets\\img\\linkedin.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\metal.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\metal.png",
       "PackagePath": "staticwebassets\\img\\metal.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\oleo.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\oleo.png",
       "PackagePath": "staticwebassets\\img\\oleo.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\papel.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\papel.png",
       "PackagePath": "staticwebassets\\img\\papel.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\pessoa.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\pessoa.png",
       "PackagePath": "staticwebassets\\img\\pessoa.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\plastico.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\plastico.png",
       "PackagePath": "staticwebassets\\img\\plastico.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\reciclagem1.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\pulmao.jpeg",
+      "PackagePath": "staticwebassets\\img\\pulmao.jpeg"
+    },
+    {
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\reciclagem1.png",
       "PackagePath": "staticwebassets\\img\\reciclagem1.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\reciclagem2.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\reciclagem2.png",
       "PackagePath": "staticwebassets\\img\\reciclagem2.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\reciclagem3.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\reciclagem3.png",
       "PackagePath": "staticwebassets\\img\\reciclagem3.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\textura-de-gesso-cartonado-sepia.jpg",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\testes.jpg",
+      "PackagePath": "staticwebassets\\img\\testes.jpg"
+    },
+    {
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\textura-de-gesso-cartonado-sepia.jpg",
       "PackagePath": "staticwebassets\\img\\textura-de-gesso-cartonado-sepia.jpg"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\vidro.png",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\vidro.png",
       "PackagePath": "staticwebassets\\img\\vidro.png"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\whats1.jpeg",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\whats1.jpeg",
       "PackagePath": "staticwebassets\\img\\whats1.jpeg"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\whats2.jpeg",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\whats2.jpeg",
       "PackagePath": "staticwebassets\\img\\whats2.jpeg"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\img\\whats3.jpeg",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\img\\whats3.jpeg",
       "PackagePath": "staticwebassets\\img\\whats3.jpeg"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\js\\site.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\js\\carrossel.js",
+      "PackagePath": "staticwebassets\\js\\carrossel.js"
+    },
+    {
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\dmsdi\\OneDrive\\Área de Trabalho\\ECOCRIA\\EcoCriaMVC\\TccEcoCriaMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Erickson\\tcc\\TccEcoCriaMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
