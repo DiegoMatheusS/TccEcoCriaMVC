@@ -31,9 +31,9 @@
             <label for="distance">Distância</label>
             <select id="distance" required>
               <option value="" disabled selected>Selecione o porte</option>
-              <option value="2">2KM</option>
-              <option value="5">5KM</option>
-              <option value="10">10KM</option>
+              <option value="2">2km</option>
+              <option value="5">5km</option>
+              <option value="10">10km</option>
             </select>
 
             <label for="porte">Porte</label>
@@ -124,24 +124,33 @@
             markers = [];
           }
 
-          function buscarPontosDeColeta(map, location, distance, produto) {
-            clearMarkers();
-            var service = new google.maps.places.PlacesService(map);
-            var request = {
-            location: location,
-            radius: distance, // A distância agora está convertida para metros
-            query: produto,
-            };
+          function buscarPontosDeColeta(map, location, distance, produto, types) {
+          clearMarkers();
+          var service = new google.maps.places.PlacesService(map);
 
-            service.textSearch(request, function (results, status) {
-              if (status === google.maps.places.PlacesServiceStatus.OK) {
-                for (var i = 0; i < results.length; i++) {
-                  createMarker(map, results[i]);
-                }
-                map.setCenter(location);
-              }
-            });
+          var request = {
+          location: location,
+          radius: distance,
+          query: produto,
+          type: types
+        };
+
+          service.textSearch(request, function (results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              var place = results[i];
+
+            // Calcular a distância entre o local encontrado e o centro do círculo
+            var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(location, place.geometry.location);
+
+            if (distanceInMeters <= distance) {
+          createMarker(map, place);
+            }
           }
+          map.setCenter(location);
+        }
+      });
+    }
 
           function createMarker(map, place) {
             var marker = new google.maps.Marker({
