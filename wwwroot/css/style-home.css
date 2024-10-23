@@ -189,21 +189,26 @@ body {
   padding: 20px;
 }
 
+
 .carousel-container {
   max-width: 100%;
+  height: 500px; /* Defina a altura desejada */
   margin: auto;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Esconde o que estiver fora do contêiner */
 }
 
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%; /* Certifique-se de que o carrossel ocupa toda a largura do contêiner */
 }
 
 .carousel img {
-  width: 100%;
+  min-width: 100%; /* Faz com que cada imagem ocupe 100% do contêiner */
+  height: 500px; /* Ocupa toda a altura do contêiner */
   border-radius: 10px;
+  display: block; /* Remove espaços indesejados abaixo da imagem */
 }
 
 .carousel-controls {
@@ -244,7 +249,6 @@ body {
 .carousel-indicators button.active {
   background-color: #60c659;
 }
-
 
 /*-------------------restantes home-----------------------*/
 
