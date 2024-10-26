@@ -104,6 +104,7 @@ header {
 }
 
 nav ul {
+  margin-top: 20px;
   list-style: none;
   display: flex;
   gap: 20px;
@@ -111,7 +112,7 @@ nav ul {
 
 nav ul li a {
   font-size: 18px;
-  color: #e1e1e1;
+  color: #979595;
   font-family: inherit;
   font-weight: 800;
   cursor: pointer;
@@ -350,11 +351,20 @@ position: relative;
 display: none; /* Esconde o radio button */
 }
 
+.material a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.material a:hover{
+  color: #2E7D32;
+}
+
 .material img {
 width: 200px;
 height: 150px;
 object-fit: cover;
-border-radius: 30px;
+border-radius: 40px 5px 40px 5px;
 transition: border 0.3s ease;
 border: 5px solid transparent;
 }
@@ -367,13 +377,37 @@ font-weight: bold;
 }
 
 .material:hover img {
-border: 5px solid #006eff; /* Borda azul ao passar o mouse */
-}
-
-/* Quando o input estiver selecionado, a borda ficará azul */
-.material input:checked + img {
-border: 5px solid #006eff;
-}
+  border: 5px solid #8aee63a2; /* Borda verde ao passar o mouse */
+  }
+  
+  /* Quando o input estiver selecionado, a borda ficará verde */
+  .material input:checked + img {
+  border: 5px solid #8aee63a2;
+  }
+  
+  
+  /* Descricão dos materiais */
+  
+  .objective-text, .description {
+    font-family: 'Inter', sans-serif;
+    color: #313131;
+    font-size: 1.1rem;
+    text-align: start;
+    font-weight: bold; /* Aplica o negrito */
+  }
+  
+  h1{
+    color: #1e6403;
+  }
+  
+  strong, h3{
+    color: #1e6403;
+    text-align: start ;
+  }
+  
+  .img-materiais{
+    width: 500px;
+  }
 
 
 /*-------------------footer-----------------------*/
