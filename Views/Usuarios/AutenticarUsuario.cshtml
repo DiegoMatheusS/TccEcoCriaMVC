@@ -29,10 +29,13 @@
         <div class="form-horizontal">
             <div class="form-group">
                 <label for="Username">Email: </label>
-                    @Html.EditorFor(model => model.EmailUsuario, new
+                    @Html.EditorFor(model => model.EmailUsuario, new 
+                { 
+                    htmlAttributes = new 
                     { 
-                       @class = "form-control", @placeholder = "Digite seu email"
-                    }   
+                        @class = "form-control", @placeholder = "Digite seu email" 
+                    } 
+                }   
                     
                 )
         </div>
