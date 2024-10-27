@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -30,7 +29,7 @@
 
             <label for="distance">Distância</label>
             <select id="distance" required>
-              <option value="" disabled selected>Selecione o porte</option>
+              <option value="" disabled selected>Selecione a distância</option>
               <option value="2">2km</option>
               <option value="5">5km</option>
               <option value="10">10km</option>
@@ -55,7 +54,7 @@
             <button type="submit">Encontrar Ponto</button>
           </form>
         </div>
-        <div id="map"></div>
+        <div id="map" style="height: 500px;"></div>
 
         <script type="text/javascript">
           function buscarCoordenadasPorCEP(cep, callback) {
@@ -64,58 +63,70 @@
                 if (status === "OK") {
                     var location = results[0].geometry.location;
                     callback(location);
+
+                    // Remove o marcador anterior se existir
+                    if (centralMarker) {
+                        centralMarker.setMap(null);
+                    }
+
+                    // Adiciona o marcador vermelho sobre o ponto central
+                    centralMarker = new google.maps.Marker({
+                        map: map,
+                        position: location,
+                        icon: {
+                            url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+                        }
+                    });
                 } else {
                     alert("Não foi possível encontrar o CEP: " + status);
                     callback(null);
                 }
             });
-        }
+          }
 
-        function initMap() {
+          function initMap() {
             var defaultCenter = { lat: -23.55052, lng: -46.633308 };
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 12,
-                center: defaultCenter,
+            map = new google.maps.Map(document.getElementById("map"), {
+              zoom: 12,
+              center: defaultCenter,
             });
 
             document.querySelector("form").addEventListener("submit", function (e) {
-                e.preventDefault();
-                var cep = document.getElementById("cep").value;
-                var distance = document.getElementById("distance").value;
-                var produto = document.getElementById("produto").value;
+              e.preventDefault();
+              var cep = document.getElementById("cep").value;
+              var distance = document.getElementById("distance").value;
+              var produto = document.getElementById("produto").value;
 
-                if (cep && distance && produto) {
-                    buscarCoordenadasPorCEP(cep, function (location) {
-                        if (location) {
-                            // Converte a distância de KM para metros
-                            var distanceInMeters = parseInt(distance) * 1000;
-                            buscarPontosDeColeta(map, location, distanceInMeters, produto);
+              if (cep && distance && produto) {
+                buscarCoordenadasPorCEP(cep, function (location) {
+                  if (location) {
+                    var distanceInMeters = parseInt(distance) * 1000;
+                    buscarPontosDeColeta(map, location, distanceInMeters, produto);
 
-                            // Limpa o círculo anterior, se existir
-                            if (currentCircle) {
-                                currentCircle.setMap(null);
-                            }
+                    if (currentCircle) {
+                      currentCircle.setMap(null);
+                    }
 
-                            // Adiciona um círculo ao redor da localização
-                            currentCircle = new google.maps.Circle({
-                              map: map,
-                              radius: distanceInMeters, // Raio em metros
-                              fillColor: '#60c659',
-                              fillOpacity: 0,
-                              strokeColor: '#60c659',
-                              strokeOpacity: 0.8,
-                              strokeWeight: 2,
-                              center: location,
-                            });
-                            
-                        }
+                    currentCircle = new google.maps.Circle({
+                      map: map,
+                      radius: distanceInMeters,
+                      fillColor: '#60c659',
+                      fillOpacity: 0,
+                      strokeColor: '#60c659',
+                      strokeOpacity: 0.8,
+                      strokeWeight: 2,
+                      center: location,
                     });
-                }
+                  }
+                });
+              }
             });
-        }
-          
+          }
+
+          let map;
           let currentCircle = null;
-          var markers = [];
+          let centralMarker = null;
+          let markers = [];
 
           function clearMarkers() {
             for (var i = 0; i < markers.length; i++) {
@@ -124,45 +135,44 @@
             markers = [];
           }
 
-          function buscarPontosDeColeta(map, location, distance, produto, types) {
-          clearMarkers();
-          var service = new google.maps.places.PlacesService(map);
+          function buscarPontosDeColeta(map, location, distance, produto) {
+            clearMarkers();
+            var service = new google.maps.places.PlacesService(map);
 
-          var request = {
-          location: location,
-          radius: distance,
-          query: produto,
-          type: types
-        };
+            var request = {
+              location: location,
+              radius: distance,
+              query: produto,
+            };
 
-          service.textSearch(request, function (results, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-              var place = results[i];
+            service.textSearch(request, function (results, status) {
+              if (status === google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                  var place = results[i];
 
-            // Calcular a distância entre o local encontrado e o centro do círculo
-            var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(location, place.geometry.location);
+                  var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(location, place.geometry.location);
 
-            if (distanceInMeters <= distance) {
-          createMarker(map, place);
-            }
+                  if (distanceInMeters <= distance) {
+                    createGreenMarker(map, place);
+                  }
+                }
+                map.setCenter(location);
+              }
+            });
           }
-          map.setCenter(location);
-        }
-      });
-    }
 
-          function createMarker(map, place) {
+          function createGreenMarker(map, place) {
             var marker = new google.maps.Marker({
               map: map,
               position: place.geometry.location,
               icon: {
-                url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+              //url: "~/img/logoponto.png", // Substitua com a URL da imagem desejada
+              //scaledSize: new google.maps.Size(32, 32) // Define o tamanho do ícone, ajustável conforme necessário
               },
             });
             markers.push(marker);
           }
-        
         </script>
         <script
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn53Otf4ztOb800GW7QXRojwmMgGD-PFA&libraries=places&callback=initMap"
