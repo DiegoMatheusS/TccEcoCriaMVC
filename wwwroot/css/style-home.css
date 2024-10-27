@@ -252,14 +252,13 @@ body {
 }
 
 .button-cep-home {
-  width: 150px;
+  width: 180px;
   padding: 5px;
   background-color: #ffffff;
-  border: #80cc28;
+  border-color: #80cc28;
   color: #80cc28;
   font-weight: bold;
-  border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 1.1rem;
   transition: background-color 0.3s;
