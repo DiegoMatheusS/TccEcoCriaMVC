@@ -1,0 +1,44 @@
+.lista-noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    display: -webkit-box;
+    margin: 0;
+    padding-left: 12%;
+}
+
+.item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 350px;
+    width: 300px;
+}
+.titulo {
+    font-size: 20px;
+    margin: 10px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #50544e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-mais{
+    display: block;
+}
+
+img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}

@@ -1,85 +1,121 @@
-﻿<!DOCTYPE html>
+﻿@{
+  ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-home.css">
-    <link rel="icon" href="img/ecocriaimg.png">
-    <script src="js/buttons.js"></script>
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="~/css/style-home.css">
+  <link rel="icon" href="~/img/ecocriaimg.png">
+
+
 </head>
 
 <body>
-    <main>
-      <div class="carousel-container">
-        <div class="carousel">
-            <img src="~/img/ColetaSeletiva.png" alt="Coleta seletiva">
-            <img src="~/img/CuidarAmbiente1.png" alt="Cuidar ambiente">
-            <img src="~/img/LixoZero1.png" alt="Lixo Zero">
-            <img src="~/img/Reciclagem14.png" alt="Reciclagem">
-            <img src="~/img/pulmao.jpeg" alt="Descrição da imagem 5">
-        </div>
-        <div class="carousel-controls">
-            <button id="prev">❮</button>
-            <button id="next">❯</button>
-        </div>
-        <div class="carousel-indicators">
-            <button class="active" data-slide="0"></button>
-            <button data-slide="1"></button>
-            <button data-slide="2"></button>
-            <button data-slide="3"></button>
-            <button data-slide="4"></button>
-        </div>
-      </div>         
-          <hr style="border: 3px solid #045002;"> 
-          <section class="intro-section">
-            
-        <!-- Seção de Escolha de Material -->
-            <div class="discard-section" >
-              <h2>QUER DESCARTAR?</h2>
-              <div class="discard-form">
-                  <div class="input-group">
-                      <span>CEP</span>
-                      <input type="text" placeholder="____-___">
-                  </div>
-                  <div class="input-group" >
-                      <span id="input-group-produto">Produto</span>
-                      <select>
-                          <option>selecione o produto</option>
-                          <option value="ponto de coleta de eletronico">Eletrônico</option>
-                          <option value="ponto de coleta de organico">Orgânico</option>
-                          <option value="ponto de coleta de plastico">Plástico</option>
-                      </select>
-                  </div>
-                  <button type="submit" class="button-cep-home">Encontrar Ponto</button>
-              </div>
-          </div>
-        </section>
-       
-        <hr style="border: 3px solid #045002;">
+  <main>
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <img src="~/img/ColetaSeletiva.png" alt="Coleta seletiva">
+        <img src="~/img/CuidarAmbiente1.png" alt="Cuidar ambiente">
+        <img src="~/img/LixoZero1.png" alt="Lixo Zero">
+        <img src="~/img/Reciclagem14.png" alt="Reciclagem">
+        <img src="~/img/pulmao.jpeg" alt="Descrição da imagem 5">
+      </div>
 
-       <div class="container">
+      <div class="carousel-controls">
+        <button id="prev">❮</button>
+        <button id="next">❯</button>
+      </div>
+
+      <div class="carousel-indicators">
+        <button class="active" data-slide="0"></button>
+        <button data-slide="1"></button>
+        <button data-slide="2"></button>
+        <button data-slide="3"></button>
+        <button data-slide="4"></button>
+      </div>
+    </div>
+
+    <hr style="border: 3px solid #045002;">
+    <section class="intro-section">
+      <div class="discard-section">
+        <h2 class="quer-descartar">QUER DESCARTAR?</h2>
+
+        <!-- Formulário que será enviado para a página Pontos ao clicar no botão Enviar -->
+        <form asp-action="Pontos" method="get" class="discard-form">
+          <div class="input-groupp">
+            <label class="cep" for="cep">CEP</label>
+            <input 
+                    type="text" 
+                    id="cep" 
+                    name="cep" 
+                    placeholder="____-___"
+                    maxlength="9" 
+                    pattern="\d{5}-\d{3}" 
+                    required 
+                    title="Formato: 12345-678"
+                    oninput="formatarCEP(this)">
+          </div>
+
+          <div class="input-groupp">
+            <label for="produto">Produto</label>
+            <select id="produto" name="produto">
+              <option disabled selected>Selecione o produto</option>
+              <option value="Alumínio">Alumínio</option>
+              <option value="Plástico">Plástico</option>
+              <option value="Metal">Metal</option>
+              <option value="Vidro">Vidro</option>
+              <option value="Papel">Papel</option>
+              <option value="Orgânico">Orgânico</option>
+              <option value="Eletrônico">Eletrônico</option>
+            </select>
+          </div>
+
+          <!-- Botão de Enviar que redireciona para a página de Pontos -->
+          <button type="submit" class="submit-button">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <hr style="border: 3px solid #045002;">
+
+    <div class="container">
       <h2>Escolha o tipo de material que deseja reciclar</h2>
       <div class="materials">
         <div class="material">
-          <a href="#papel"><img src="img/papel.png" alt="Papel"><span>PAPEL</span></a>
+          <a href="#papel">
+            <img src="~/img/papel.png" alt="Papel">
+            <span>PAPEL</span></a>
         </div>
         <div class="material">
-          <a href="#plastico"><img src="img/plastico.png" alt="Plástico"><span>PLÁSTICO</span></a>
+          <a href="#plastico">
+            <img src="~/img/plastico.png" alt="Plástico">
+            <span>PLÁSTICO</span></a>
         </div>
         <div class="material">
-          <a href="#metal"><img src="img/metal.png" alt="Metal"><span>METAL</span></a>
+          <a href="#metal">
+            <img src="~/img/metal.png" alt="Metal">
+            <span>METAL</span></a>
         </div>
         <div class="material">
-          <a href="#oleo"><img src="img/oleo.png" alt="Óleo"><span>ÓLEO</span></a>
+          <a href="#oleo">
+            <img src="~/img/oleo.png" alt="Óleo">
+            <span>ÓLEO</span></a>
         </div>
         <div class="material">
-          <a href="#vidro"><img src="img/vidro.png" alt="Vidro"><span>VIDRO</span></a>
+          <a href="#vidro">
+            <img src="~/img/vidro.png" alt="Vidro">
+            <span>VIDRO</span></a>
         </div>
         <div class="material">
-          <a href="#aluminio"><img src="img/aluminio.png" alt="Alumínio"><span>ALUMÍNIO</span></a>
+          <a href="#aluminio">
+            <img src="~/img/aluminio.png" alt="Alumínio">
+            <span>ALUMÍNIO</span></a>
         </div>
       </div>
     </div>
@@ -121,7 +157,7 @@
             além de consumir menos energia do que a produção de papel novo a partir de madeira.
           </p> <br><br>
 
-          <img src="img/processo-papel.gif" alt="Processo de reciclagem do papel">
+          <img src="~/img/processo-papel.gif" alt="Processo de reciclagem do papel">
         </div>
       </div>
     </div>
@@ -169,7 +205,7 @@
             em aterros.
           </p> <br><br>
 
-          <img src="img/transformacao_reciclagem_PET.jpg" alt="Processo de reciclagem do plástico"
+          <img src="~/img/transformacao_reciclagem_PET.jpg" alt="Processo de reciclagem do plástico"
             class="img-materiais">
         </div>
       </div>
@@ -219,7 +255,7 @@
             quantidade de resíduos enviados a aterros sanitários.
           </p> <br><br>
 
-          <img src="img/METAL_RECICLAR.jpg" alt="Peças de METAL" class="img-materiais">
+          <img src="~/img/METAL_RECICLAR.jpg" alt="Peças de METAL" class="img-materiais">
         </div>
       </div>
     </div>
@@ -263,7 +299,7 @@
             reaproveitamento desse recurso valioso.
           </p> <br><br>
 
-          <img src="img/oleo-reciclagem.jpg" alt="Reciclagem do óleo" width="600px">
+          <img src="~/img/oleo-reciclagem.jpg" alt="Reciclagem do óleo" width="600px">
         </div>
       </div>
     </div>
@@ -308,7 +344,7 @@
             quantidade de resíduos em aterros. Além disso, o vidro pode ser reciclado indefinidamente.
           </p> <br><br>
 
-          <img src="img/vidro-reciclado.jpg" alt="Reciclagem do óleo" width="700px" height="350px">
+          <img src="~/img/vidro-reciclado.jpg" alt="Reciclagem do óleo" width="700px" height="350px">
         </div>
       </div>
     </div>
@@ -350,68 +386,14 @@
             de resíduos e a necessidade de extração de recursos naturais
           </p> <br><br>
 
-          <img src="img/aluminio-reciclagem.jpg" alt="Reciclagem do óleo" width="700px" height="350px">
+          <img src="~/img/aluminio-reciclagem.jpg" alt="Reciclagem do óleo" width="700px" height="350px">
         </div>
       </div>
     </div>
 
+  </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <script>
-
-
-            let currentIndex = 0;
-            const images = document.querySelectorAll('.carousel img');
-            const indicators = document.querySelectorAll('.carousel-indicators button');
-
-            function updateCarousel(index) {
-                const totalImages = images.length;
-                currentIndex = (index + totalImages) % totalImages; // Mantém o índice dentro do limite
-                const offset = -currentIndex * 100; // Move o carrossel
-                document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
-
-                // Atualiza os indicadores
-                indicators.forEach((indicator, i) => {
-                    indicator.classList.toggle('active', i === currentIndex);
-                });
-            }
-
-            // Função para avançar automaticamente
-            function autoAdvance() {
-                updateCarousel(currentIndex + 1);
-            }
-
-            // Intervalo de 5 segundos
-            setInterval(autoAdvance, 5000); // 5000 milissegundos = 5 segundos
-
-            // Eventos dos botões
-            document.getElementById('prev').addEventListener('click', () => updateCarousel(currentIndex - 1));
-            document.getElementById('next').addEventListener('click', () => updateCarousel(currentIndex + 1));
-
-            // Eventos dos indicadores
-            indicators.forEach((indicator, i) => {
-                indicator.addEventListener('click', () => updateCarousel(i));
-            });
-          
-          </script>
-
-    <script src="~/js/carrossel.js"></script>
-    </main>
+  <script src="~/js/index.js" asp-append-version="true"></script>
 </body>
-
-
 
 </html>

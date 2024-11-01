@@ -251,24 +251,6 @@ body {
   background-color: #60c659;
 }
 
-.button-cep-home {
-  width: 150px;
-  padding: 5px;
-  background-color: #ffffff;
-  border: #80cc28;
-  color: #80cc28;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s;
-}
-
-.button-cep-home:hover {
-  background-color: #80cc28;
-  color: white;
-}
 
 /*-------------------restantes home-----------------------*/
 
@@ -284,24 +266,28 @@ align-items: center;
 }
 
 .discard-section {
-background-color: #555;
-color: white;
-padding: 20px;
-margin-left: 20px;
-margin-top: 20px;
-margin-bottom: 20px;
-border-radius: 15px;
-display: flex;
-align-items: center;
-justify-content: space-around;
-width: 550px;
-height: 200px;
-box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  background-color: #a2c07c;
+  color: white;
+  padding: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .discard-section h2 {
-font-size: 18px;
-margin: 0;
+  font-size: 18px;
+  margin: 0;
+}
+
+.cep{
+  padding: 3px;
 }
 
 .discard-form {
@@ -318,33 +304,38 @@ padding: 10px;
 margin-bottom: 10px;
 border-radius: 20px;
 border: none;
-width: 60%;
+width: 90%;
 font-size: 14px;
 }
 
-.input-group {
-display: flex;
-align-items: center;
-width: 400px;
-margin-bottom: 15px;
+.input-groupp {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#input-group-produto{
- padding: 8.3px;
+.input-groupp input,
+.input-groupp select {
+  border-radius: 0 20px 20px 0;
 }
 
-.input-group span {
-background-color: #8cc63f;
-padding: 10px;
-border-radius: 20px 0 0 20px;
-color: white;
-font-size: 14px;
-margin-bottom: 10px;
+
+.submit-button {
+  display: block; /* Garante que o botão ocupe uma linha inteira */
+  background-color: #77c043;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 30px;
+  margin-top: 15px;
 }
 
-.input-group input,
-.input-group select {
-border-radius: 0 20px 20px 0;
+.submit-button:hover {
+  background-color: #64a836;
 }
 
 .container {
@@ -434,6 +425,11 @@ font-weight: bold;
     width: 500px;
   }
 
+  .quer-descartar {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
 
 /*-------------------footer-----------------------*/
 
