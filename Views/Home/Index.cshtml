@@ -1,6 +1,12 @@
 ﻿@{
   ViewData["Title"] = "Home Page";
 }
+@if (TempData["Mensagem"] != null)
+{
+  <div class="alert alert-success">
+    @TempData["Mensagem"]
+  </div>
+}
 
 <!DOCTYPE html>
 <html lang="pt-BR">

@@ -75,7 +75,7 @@ namespace EcoCriaMVC.Controllers
                     Usuario uLogado = JsonConvert.DeserializeObject<Usuario>(serialized);
                     HttpContext.Session.SetString("SessionTokenUsuario", uLogado.Token);
                     TempData["Mensagem"] = string.Format("Bem-Vindo {0}!!", uLogado.NomeUsuario);
-                    return RedirectToAction("index", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {

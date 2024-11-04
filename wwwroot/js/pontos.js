@@ -1,19 +1,34 @@
+
 function buscarCoordenadasPorCEP(cep, callback) {
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({ address: cep }, function (results, status) {
-    if (status === "OK") {
-      var location = results[0].geometry.location;
-      callback(location);
-    } else {
-      alert("Não foi possível encontrar o CEP: " + status);
-      callback(null);
-    }
+      if (status === "OK") {
+          var location = results[0].geometry.location;
+          callback(location);
+
+          // Remove o marcador anterior se existir
+          if (centralMarker) {
+              centralMarker.setMap(null);
+          }
+
+          // Adiciona o marcador vermelho sobre o ponto central
+          centralMarker = new google.maps.Marker({
+              map: map,
+              position: location,
+              icon: {
+                  url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+              }
+          });
+      } else {
+          alert("Não foi possível encontrar o CEP: " + status);
+          callback(null);
+      }
   });
 }
 
 function initMap() {
   var defaultCenter = { lat: -23.55052, lng: -46.633308 };
-  var map = new google.maps.Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
     center: defaultCenter,
   });
@@ -27,19 +42,16 @@ function initMap() {
     if (cep && distance && produto) {
       buscarCoordenadasPorCEP(cep, function (location) {
         if (location) {
-          // Converte a distância de KM para metros
           var distanceInMeters = parseInt(distance) * 1000;
           buscarPontosDeColeta(map, location, distanceInMeters, produto);
 
-          // Limpa o círculo anterior, se existir
           if (currentCircle) {
             currentCircle.setMap(null);
           }
 
-          // Adiciona um círculo ao redor da localização
           currentCircle = new google.maps.Circle({
             map: map,
-            radius: distanceInMeters, // Raio em metros
+            radius: distanceInMeters,
             fillColor: '#60c659',
             fillOpacity: 0,
             strokeColor: '#60c659',
@@ -47,15 +59,16 @@ function initMap() {
             strokeWeight: 2,
             center: location,
           });
-
         }
       });
     }
   });
 }
 
+let map;
 let currentCircle = null;
-var markers = [];
+let centralMarker = null;
+let markers = [];
 
 function clearMarkers() {
   for (var i = 0; i < markers.length; i++) {
@@ -64,20 +77,14 @@ function clearMarkers() {
   markers = [];
 }
 
-function buscarPontosDeColeta(map, location, distance, produto, types) {
+function buscarPontosDeColeta(map, location, distance, produto) {
   clearMarkers();
-
-  // Limpa a lista de resultados anterior
-  var resultList = document.getElementById("result-list");
-  resultList.innerHTML = "";
-
   var service = new google.maps.places.PlacesService(map);
 
   var request = {
     location: location,
     radius: distance,
     query: produto,
-    type: types
   };
 
   service.textSearch(request, function (results, status) {
@@ -85,17 +92,10 @@ function buscarPontosDeColeta(map, location, distance, produto, types) {
       for (var i = 0; i < results.length; i++) {
         var place = results[i];
 
-        // Calcular a distância entre o local encontrado e o centro do círculo
         var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(location, place.geometry.location);
 
         if (distanceInMeters <= distance) {
-          createMarker(map, place);
-
-          // Adiciona o nome e o endereço à lista de resultados
-          var listItem = document.createElement("div");
-          listItem.className = "result-item";
-          listItem.innerHTML = `<strong>${place.name}</strong><br>${place.formatted_address}`;
-          resultList.appendChild(listItem);
+          createGreenMarker(map, place);
         }
       }
       map.setCenter(location);
@@ -103,24 +103,17 @@ function buscarPontosDeColeta(map, location, distance, produto, types) {
   });
 }
 
-function createMarker(map, place) {
+function createGreenMarker(map, place) {
   var marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location,
     icon: {
-      url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+    //url: "~/img/logo.ponto.png", // Substitua com a URL da imagem desejada
+    //scaledSize: new google.maps.Size(32, 32) // Define o tamanho do ícone, ajustável conforme necessário
     },
   });
   markers.push(marker);
-
-  // Adiciona uma janela de informação ao clicar no marcador
-  var infowindow = new google.maps.InfoWindow({
-    content: `<div><strong>${place.name}</strong><br>${place.formatted_address}</div>`,
-  });
-
-  marker.addListener("click", function () {
-    infowindow.open(map, marker);
-  });
 }
 
 
