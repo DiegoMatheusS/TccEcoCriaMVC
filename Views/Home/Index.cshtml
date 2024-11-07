@@ -56,16 +56,8 @@
         <form asp-action="Pontos" method="get" class="discard-form">
           <div class="input-groupp">
             <label class="cep" for="cep">CEP</label>
-            <input 
-                    type="text" 
-                    id="cep" 
-                    name="cep" 
-                    placeholder="____-___"
-                    maxlength="9" 
-                    pattern="\d{5}-\d{3}" 
-                    required 
-                    title="Formato: 12345-678"
-                    oninput="formatarCEP(this)">
+            <input type="text" id="cep" name="cep" placeholder="____-___" maxlength="9" pattern="\d{5}-\d{3}" required
+              title="Formato: 12345-678" oninput="formatarCEP(this)">
           </div>
 
           <div class="input-groupp">

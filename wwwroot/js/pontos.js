@@ -1,4 +1,3 @@
-
 function buscarCoordenadasPorCEP(cep, callback) {
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({ address: cep }, function (results, status) {
@@ -77,14 +76,20 @@ function clearMarkers() {
   markers = [];
 }
 
-function buscarPontosDeColeta(map, location, distance, produto) {
+function buscarPontosDeColeta(map, location, distance, produto, types) {
   clearMarkers();
+
+  // Limpa a lista de resultados anterior
+  var resultList = document.getElementById("result-list");
+  resultList.innerHTML = "";
+
   var service = new google.maps.places.PlacesService(map);
 
   var request = {
     location: location,
     radius: distance,
     query: produto,
+    type: types
   };
 
   service.textSearch(request, function (results, status) {
@@ -92,10 +97,18 @@ function buscarPontosDeColeta(map, location, distance, produto) {
       for (var i = 0; i < results.length; i++) {
         var place = results[i];
 
+        // Calcular a distância entre o local encontrado e o centro do círculo
         var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(location, place.geometry.location);
 
         if (distanceInMeters <= distance) {
-          createGreenMarker(map, place);
+          createMarker(map, place);
+
+          // Adiciona o nome e o endereço à lista de resultados
+          var listItem = document.createElement("div");
+          listItem.className = "result-item";
+          listItem.innerHTML = `<strong>${place.name}</strong><br>${place.formatted_address}`;
+          resultList.appendChild(listItem);
+
         }
       }
       map.setCenter(location);
@@ -103,17 +116,26 @@ function buscarPontosDeColeta(map, location, distance, produto) {
   });
 }
 
-function createGreenMarker(map, place) {
+
+
+function createMarker(map, place) {
   var marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location,
     icon: {
       url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
-    //url: "~/img/logo.ponto.png", // Substitua com a URL da imagem desejada
-    //scaledSize: new google.maps.Size(32, 32) // Define o tamanho do ícone, ajustável conforme necessário
     },
   });
   markers.push(marker);
+
+  // Adiciona uma janela de informação ao clicar no marcador
+  var infowindow = new google.maps.InfoWindow({
+    content: `<div><strong>${place.name}</strong><br>${place.formatted_address}</div>`,
+  });
+
+  marker.addListener("click", function () {
+    infowindow.open(map, marker);
+  });
 }
 
 
