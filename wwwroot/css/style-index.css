@@ -169,6 +169,28 @@ font-size: 24px;
 margin-bottom: 40px;
 }
 
+/*SCROLL - UP - BUTTON*/
+
+.to-top{
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  background-color: rgb(75, 194, 28);
+  border-radius: 60%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+
+}
+
+.to-top.active{
+  right: 15px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
 .materials {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
