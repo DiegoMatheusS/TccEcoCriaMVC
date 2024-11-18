@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "28cp0u/IbC0=",
+  "dgSpecHash": "mbLBCn65NS0=",
   "success": true,
-  "projectFilePath": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
+  "projectFilePath": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\etechas\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.8\\microsoft.aspnetcore.jsonpatch.8.0.8.nupkg.sha512",
     "C:\\Users\\etechas\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.8\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.8.nupkg.sha512",

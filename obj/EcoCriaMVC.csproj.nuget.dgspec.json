@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj": {}
+    "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\EcoCriaMVC.csproj": {}
   },
   "projects": {
-    "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj": {
+    "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\EcoCriaMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
+        "projectUniqueName": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
         "projectName": "EcoCriaMVC",
-        "projectPath": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
+        "projectPath": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\EcoCriaMVC.csproj",
         "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\TccEcoCriaMVC\\obj\\",
+        "outputPath": "D:\\Diego_Matheus_3DS\\3DS\\TCC\\TCC-ECOCRIA\\TccEcoCriaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
