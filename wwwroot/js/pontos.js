@@ -152,3 +152,15 @@ function formatarCEP(input) {
   // Atualiza o valor do input
   input.value = valor;
 }
+
+//Função para voltar a página para cima
+const toTop = document.querySelector(".to-top-ponto");
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 1200){
+        toTop.classList.add("active");
+    }
+    else{
+        toTop.classList.remove("active");
+    }
+})

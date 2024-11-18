@@ -145,6 +145,10 @@ transition-duration: 400ms;
 transition-property: width, left;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 
 
 .social-media a {
@@ -162,6 +166,38 @@ transition-property: width, left;
   filter: grayscale(0%);
 }
 
+
+@media (max-width: 1300px){
+  .nav-list,
+  .login-dropdown,
+  .social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+  }
+
+  .login-dropdown{
+    margin-left: 94.3%;
+    top: 20px;
+  }
+}
+
+@media (max-width: 500px){
+  .nav-list,
+  .login-dropdown,
+  .social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+  }
+
+  .login-dropdown{
+    margin-left: 82%;
+    top: 20px;
+  }
+}
 
 
 
