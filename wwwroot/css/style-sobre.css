@@ -1,5 +1,4 @@
-
-
+/* Estilos básicos para a seção */
 .intro-section {
   display: flex;
   justify-content: center;
@@ -23,7 +22,7 @@
   color: #333;
   margin: 0 auto;
   max-width: 800px;
-  font-weight: bold; /* Aplica o negrito */
+  font-weight: bold;
 }
 
 .objectives-section {
@@ -51,17 +50,15 @@
   color: #333;
   font-size: 1rem;
   text-align: justify;
-  font-weight: bold; /* Aplica o negrito */
+  font-weight: bold;
 }
-
-
 
 .mission-vision-values {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #e8f5e9; /* Cor clara de fundo */
+  background-color: #e8f5e9;
 }
 
 .image-container {
@@ -114,10 +111,9 @@
   padding: 20px;
   font-family: 'Inter', sans-serif;
   text-align: left;
-  
 }
-/*---------------------ultima parte sobre ------------------------*/
 
+/* Contact Section */
 .contact-section {
   display: flex;
   justify-content: space-between;
@@ -140,7 +136,7 @@
 
 .formulario {
   margin-bottom: 20px;
-  text-align: center; /* Centraliza o texto dentro do input */
+  text-align: center;
 }
 
 .formulario label {
@@ -154,14 +150,14 @@
 
 .form-control,
 .formulario textarea {
-  width: 100%; /* Altera a largura para 100% do espaço do grupo */
-  max-width: 400px; /* Define uma largura máxima para inputs */
+  width: 100%;
+  max-width: 400px;
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 30px;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  margin: 0 auto; /* Centraliza o input dentro do grupo */
+  margin: 0 auto;
 }
 
 .form-control,
@@ -171,7 +167,7 @@
 }
 
 .submit-button {
-  display: block; /* Garante que o botão ocupe uma linha inteira */
+  display: block;
   background-color: #77c043;
   color: white;
   border: none;
@@ -181,7 +177,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin: 0 auto; /* Centraliza o botão */
+  margin: 0 auto;
 }
 
 .submit-button:hover {
@@ -196,6 +192,135 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  
 }
-/*----------------------------------- Cabeçalho ---------------------------------------------------**/
+
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (máximo 768px) */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  .objectives-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .objective-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .objective-item img {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .mission-vision-values {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    flex: 1;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .buttons-container {
+    flex: 1;
+    gap: 15px;
+  }
+
+  .green-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .content-box {
+    padding: 15px;
+  }
+
+  /* Ajustes na seção de contato */
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .contact-form {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .contact-form h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .form-control,
+  .formulario textarea {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+
+  .contact-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+
+/* Para telas muito pequenas (máximo 480px) */
+@media (max-width: 480px) {
+  .description p {
+    font-size: 0.85rem;
+  }
+
+  .objectives-section {
+    gap: 10px;
+  }
+
+  .objective-item img {
+    width: 120px;
+  }
+
+  .green-button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .content-box {
+    padding: 10px;
+  }
+
+  .contact-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+    padding: 10px 25px;
+  }
+
+  .contact-image img {
+    width: 100%;
+    height: auto;
+  }
+}
