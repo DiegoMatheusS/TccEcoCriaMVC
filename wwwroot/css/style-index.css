@@ -1,0 +1,332 @@
+/*--------------------------------------------------------------------------------*/
+/* Estilos Gerais */
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Carrossel */
+.carousel-container {
+  max-width: 100%;
+  height: 500px; /* Defina a altura desejada */
+  margin: auto;
+  position: relative;
+  overflow: hidden; /* Esconde o que estiver fora do contêiner */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Certifique-se de que o carrossel ocupa toda a largura do contêiner */
+}
+
+.carousel img {
+  min-width: 100%; /* Faz com que cada imagem ocupe 100% do contêiner */
+  height: 500px; /* Ocupa toda a altura do contêiner */
+  border-radius: 10px;
+  display: block; /* Remove espaços indesejados abaixo da imagem */
+}
+
+.carousel-controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicators button.active {
+  background-color: #60c659;
+}
+
+/*------------------- Estilos de Home -----------------------*/
+.intro-section {
+display: flex;
+justify-content: flex-start;
+padding: 20px;
+background-color: #e3f4dc;
+max-width: 100%;
+height: 400px;
+border-radius: 10px;
+align-items: center;
+background-image: url("./../img/imgcontainer.jpg");
+background-position: center;
+background-size: cover;
+}
+
+.discard-section {
+  background-color: #a2c07c;
+  color: white;
+  padding: 40px;
+  margin-left: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.discard-section h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.cep {
+  padding: 7px;
+}
+
+.discard-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.discard-form input,
+.discard-form select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 90%;
+  font-size: 14px;
+}
+
+.input-groupp {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-groupp input,
+.input-groupp select {
+  border-radius: 0 20px 20px 0;
+}
+
+.submit-button {
+  display: block;
+  background-color: #ffffff;
+  color: #64a836;
+  border: solid #64a836;
+  border-radius: 30px;
+  padding: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 30px;
+  margin-top: 15px;
+  width: 150px;
+}
+
+.submit-button:hover {
+  background-color: #64a836;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+  background-color: white;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+/* Scroll Up Button */
+.to-top {
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  background-color: rgb(75, 194, 28);
+  border-radius: 60%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active {
+  right: 15px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Materiais (Grid) */
+.materials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.material {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.material input {
+  display: none;
+}
+
+.material a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.material a:hover {
+  color: #2E7D32;
+}
+
+.material img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 40px 5px 40px 5px;
+  transition: border 0.3s ease;
+  border: 5px solid transparent;
+}
+
+.material span {
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.material:hover img {
+  border: 5px solid #8aee63a2;
+}
+
+.material input:checked + img {
+  border: 5px solid #8aee63a2;
+}
+
+/* Descrição dos Materiais */
+.objective-text, .description {
+  font-family: 'Inter', sans-serif;
+  color: #313131;
+  font-size: 1.1rem;
+  text-align: start;
+  font-weight: bold;
+}
+
+h1 {
+  color: #1e6403;
+}
+
+strong, h3 {
+  color: #1e6403;
+  text-align: start;
+}
+
+.img-materiais {
+  width: 500px;
+}
+
+.quer-descartar {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para dispositivos móveis */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 300px; /* Reduz a altura do carrossel */
+  }
+
+  .discard-section {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .submit-button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .materials {
+    grid-template-columns: repeat(2, 1fr); /* Dois itens por linha */
+  }
+
+  .material img {
+    width: 150px;
+    height: 120px;
+  }
+
+  .objective-text, .description {
+    font-size: 1rem;
+  }
+}
+
+/* Para telas menores (máximo 480px) */
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 250px; /* Reduz ainda mais a altura */
+  }
+
+  .discard-section {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .material img {
+    width: 120px;
+    height: 100px;
+  }
+
+  .materials {
+    grid-template-columns: 1fr; /* Um item por linha */
+  }
+
+  .objective-text, .description {
+    font-size: 0.9rem;
+  }
+}

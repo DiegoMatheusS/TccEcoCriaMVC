@@ -18,8 +18,17 @@ public class HomeController : Controller
         return View();
     }
 
-
     public IActionResult Sobre()
+    {
+        return View();
+    }
+
+    public IActionResult Pontos()
+    {
+        return View();
+    }
+
+    public IActionResult Noticias()
     {
         return View();
     }

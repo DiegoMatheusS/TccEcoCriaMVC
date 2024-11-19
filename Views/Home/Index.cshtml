@@ -1,152 +1,405 @@
-﻿<!DOCTYPE html>
+﻿@{
+  ViewData["Title"] = "Home Page";
+}
+@if (TempData["Mensagem"] != null)
+{
+  <div class="alert alert-success">
+    @TempData["Mensagem"]
+  </div>
+}
+
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-home.css">
-    <link rel="icon" href="img/ecocriaimg.png">
-    <script src="js/buttons.js"></script>
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_double_arrow_up" />
+  <link rel="stylesheet" href="~/css/style-index.css">
+  <link rel="icon" href="~/img/ecocriaimg.png">
+
+
 </head>
 
 <body>
-    <main>
-        <div class="carousel-container">
-            <div class="carousel" id="carousel">
-              <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
-              <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
-              <img src="img/whats1.jpeg" alt="Slide 3">
-              <img src="img/whats2.jpeg" alt="Slide 4">
-              <img src="img/whats3.jpeg" alt="Slide 5">
-            </div>
-          
-            <div class="carousel-controls">
-              <button id="prevBtn">&#10094;</button>
-              <button id="nextBtn">&#10095;</button>
-            </div>
-          
-            <div class="carousel-indicators" id="carouselIndicators">
-              <button data-slide="0" class="active"></button>
-              <button data-slide="1"></button>
-              <button data-slide="2"></button>
-              <button data-slide="3"></button>
-              <button data-slide="4"></button>
-            </div>
-          </div>
-          
-          <hr style="border: 3px solid #045002;"> 
-          <section class="intro-section">
-            
-        <!-- Seção de Escolha de Material -->
-            <div class="discard-section" >
-              <h2>QUER DESCARTAR?</h2>
-              <div class="discard-form">
-                  <div class="input-group">
-                      <span>CEP</span>
-                      <input type="text" placeholder="____-___">
-                  </div>
-                  <div class="input-group">
-                      <span>Produto</span>
-                      <select>
-                          <option>selecione o produto</option>
-                      </select>
-                  </div>
-              </div>
-          </div>
-        </section>
-       
-        <hr style="border: 3px solid #045002;">
-
-        <div class="container">
-          <h2>Escolha o tipo de material que deseja reciclar</h2>
-          <div class="materials">
-              <div class="material">
-                  <img src="img/papel.png" alt="Papel">
-                  <span>PAPEL</span>
-              </div>
-              <div class="material">
-                  <img src="img/plastico.png" alt="Plástico">
-                  <span>PLÁSTICO</span>
-              </div>
-              <div class="material">
-                  <img src="img/metal.png" alt="Metal">
-                  <span>METAL</span>
-              </div>
-              <div class="material">
-                  <img src="img/oleo.png" alt="Óleo">
-                  <span>ÓLEO</span>
-              </div>
-              <div class="material">
-                  <img src="img/vidro.png" alt="Vidro">
-                  <span>VIDRO</span>
-              </div>
-              <div class="material">
-                  <img src="img/aluminio.png" alt="Alumínio">
-                  <span>ALUMÍNIO</span>
-              </div>
-          </div>
+  <main>
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <img src="~/img/ColetaSeletiva.png" alt="Coleta seletiva">
+        <img src="~/img/CuidarAmbiente1.png" alt="Cuidar ambiente">
+        <img src="~/img/LixoZero1.png" alt="Lixo Zero">
+        <img src="~/img/Reciclagem14.png" alt="Reciclagem">
+        <img src="~/img/pulmao.jpeg" alt="Descrição da imagem 5">
       </div>
 
+      <div class="carousel-controls">
+        <button id="prev">❮</button>
+        <button id="next">❯</button>
+      </div>
+
+      <div class="carousel-indicators">
+        <button class="active" data-slide="0"></button>
+        <button data-slide="1"></button>
+        <button data-slide="2"></button>
+        <button data-slide="3"></button>
+        <button data-slide="4"></button>
+      </div>
+    </div>
+
+    <hr style="border: 3px solid #045002;">
+    <section class="intro-section">
+      <div class="discard-section">
+        <h2 class="quer-descartar">QUER DESCARTAR?</h2>
+
+        <!-- Formulário que será enviado para a página Pontos ao clicar no botão Enviar -->
+        <form asp-action="Pontos" method="get" class="discard-form">
+          <div class="input-groupp">
+            <label class="cep" for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" placeholder="____-___" maxlength="9" pattern="\d{5}-\d{3}" required
+              title="Formato: 12345-678" oninput="formatarCEP(this)">
+          </div>
+
+          <div class="input-groupp">
+            <label for="produto">Produto</label>
+            <select id="produto" name="produto">
+              <option disabled selected>Selecione o produto</option>
+              <option value="Alumínio">Alumínio</option>
+              <option value="Plástico">Plástico</option>
+              <option value="Metal">Metal</option>
+              <option value="Vidro">Vidro</option>
+              <option value="Papel">Papel</option>
+              <option value="Orgânico">Orgânico</option>
+              <option value="Eletrônico">Eletrônico</option>
+            </select>
+          </div>
+
+          <!-- Botão de Enviar que redireciona para a página de Pontos -->
+          <button type="submit" class="submit-button">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <hr style="border: 3px solid #045002;">
+
+    <div class="container">
+      <h2>Escolha o tipo de material que deseja reciclar</h2>
+      <div class="materials">
+        <div class="material">
+          <a href="#papel">
+            <img src="~/img/papel.png" alt="Papel">
+            <span>PAPEL</span></a>
+        </div>
+        <div class="material">
+          <a href="#plastico">
+            <img src="~/img/plastico.png" alt="Plástico">
+            <span>PLÁSTICO</span></a>
+        </div>
+        <div class="material">
+          <a href="#metal">
+            <img src="~/img/metal.png" alt="Metal">
+            <span>METAL</span></a>
+        </div>
+        <div class="material">
+          <a href="#oleo">
+            <img src="~/img/oleo.png" alt="Óleo">
+            <span>ÓLEO</span></a>
+        </div>
+        <div class="material">
+          <a href="#vidro">
+            <img src="~/img/vidro.png" alt="Vidro">
+            <span>VIDRO</span></a>
+        </div>
+        <div class="material">
+          <a href="#aluminio">
+            <img src="~/img/aluminio.png" alt="Alumínio">
+            <span>ALUMÍNIO</span></a>
+        </div>
+      </div>
+    </div>
+    
+
+    <a href="#" class="to-top">
+        <i class="material-symbols-outlined">
+            <span class="material-symbols-outlined">keyboard_double_arrow_up </span>
+        </i>
+    </a>
+
+    <hr style="border: 3px solid #045002;">
+
+    <div class="container">
+      <div class="descripton-material">
+        <div id="papel">
+          <h1>PAPEL</h1> <br>
+
+          <p class="description">O papel é um material produzido a partir da celulose, que é extraída de fibras
+            vegetais, como madeira. É amplamente utilizado devido à sua versatilidade, leveza e facilidade de uso em
+            diversas aplicações.</p>
+          <br><br>
+
+          <h3><strong>Principais Itens de Papel no Dia a Dia:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Embalagens:</strong> Caixas, sacolas e papelão.<br>
+
+            <strong>Escritório:</strong> Papel para impressão, cadernos, folhas de ofício e blocos de notas.<br>
+
+            <strong>Livros e Revistas:</strong> Materiais impressos para leitura.<br>
+
+            <strong>Produtos de Higiene:</strong> Papel toalha, papel higiênico e lenços de papel.<br><br>
+          </p>
+
+          <h3><strong>Reciclagem de Papel:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Coleta:</strong> Separe o papel limpo e seco dos outros resíduos. Evite papéis sujos ou contaminados
+            com alimentos.<br>
+
+            <strong>Pontos de Coleta:</strong> Leve o papel a centros de reciclagem ou locais de coleta seletiva.<br>
+
+            <strong>Processamento:</strong> O papel reciclado é triturado, misturado com água e transformado em polpa.
+            Essa polpa é então processada para produzir novo papel.<br><br><br>
+
+            A reciclagem de papel economiza árvores, reduz o desperdício e diminui a quantidade de resíduos em aterros,
+            além de consumir menos energia do que a produção de papel novo a partir de madeira.
+          </p> <br><br>
+
+          <img src="~/img/processo-papel.gif" alt="Processo de reciclagem do papel">
+        </div>
+      </div>
+    </div>
 
 
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <hr style="border: 3px solid #045002;">
+
+    <div class="container">
+      <div class="descripton-material">
+        <div id="plastico">
+          <h1>PLÁSTICO</h1> <br>
+
+          <p class="description">O plástico é um material sintético feito de polímeros, amplamente utilizado devido à
+            sua versatilidade, leveza e resistência. É encontrado em diversas formas e é usado em muitos produtos do
+            cotidiano.</p> <br><br>
+
+          <h3><strong>Principais Itens de Plástico no Dia a Dia:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Embalagens:</strong> Sacolas, garrafas, potes e filmes plásticos.<br>
+
+            <strong>Utensílios:</strong> Talheres descartáveis, copos e pratos de plástico.<br>
+
+            <strong>Eletrodomésticos:</strong> Componentes e revestimentos de aparelhos como liquidificadores e
+            aspiradores.<br><br>
+          </p>
+
+          <h3><strong>Reciclagem do Plástico:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Coleta:</strong> Separe o plástico limpo e seco dos outros resíduos. Certifique-se de que não haja
+            restos de alimentos.<br>
+
+            <strong>Classficação:</strong> Identifique o tipo de plástico, pois nem todos são recicláveis. Os plásticos
+            são geralmente rotulados com um número de 1 a 7 que indica o tipo de resina.
+            <br>
+
+            <strong>Pontos de Coleta:</strong> Leve os plásticos a centros de reciclagem ou pontos de coleta
+            específicos. Algumas cidades também oferecem coleta seletiva.<br>
+
+            <strong>Processamento:</strong> O plástico reciclado é triturado, derretido e moldado em novos
+            produtos.<br><br><br>
+
+            A reciclagem do plástico ajuda a reduzir a poluição, economiza recursos e diminui a quantidade de resíduos
+            em aterros.
+          </p> <br><br>
+
+          <img src="~/img/transformacao_reciclagem_PET.jpg" alt="Processo de reciclagem do plástico"
+            class="img-materiais">
+        </div>
+      </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <hr style="border: 3px solid #045002;">
+
+    <div class="container">
+      <div class="descripton-material">
+        <div id="metal">
+          <h1>METAL</h1> <br>
+
+          <p class="description">O ferro é um metal abundante na natureza, essencial na fabricação de diversos produtos
+            devido à sua resistência e versatilidade. É um componente-chave do aço, que é uma liga de ferro e carbono,
+            amplamente utilizado na construção civil, na fabricação de veículos e em eletrodomésticos.</p> <br><br>
+
+          <h3><strong>Principais Itens de Metal no Dia a Dia:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Móveis:</strong> Estruturas de camas, mesas e cadeiras frequentemente usam ferro.<br>
+
+            <strong>Ferramentas:</strong> Chaves, alicates e outras ferramentas manuais são muitas vezes feitas de
+            ferro.<br>
+
+            <strong>Utensílios de Cozinha:</strong> Panelas e frigideiras de ferro fundido.<br>
+
+            <strong>Eletrodomésticos:</strong> Geladeiras, fogões e máquinas de lavar geralmente contêm partes de
+            ferro.<br><br>
+          </p>
+
+          <h3><strong>Reciclagem do Metal:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Coleta:</strong> Separe os itens de metal que não são mais utilizados e coloque-os em um local
+            específico para reciclagem.<br>
+
+            <strong>Pontos de Coleta:</strong> Leve os itens a centros de reciclagem ou pontos de coleta que aceitem
+            metais. Muitas cidades têm locais designados para isso<br>
+
+            <strong>Desmontagem:</strong> Em alguns casos, é necessário desmontar produtos maiores (como
+            eletrodomésticos) para facilitar o processo de reciclagem.<br>
+
+            <strong>Processamento:</strong> O metal reciclado é então derretido e reprocessado para ser utilizado na
+            fabricação de novos produtos.<br><br><br>
+
+            A reciclagem do metal é importante, pois reduz a necessidade de mineração, economiza energia e diminui a
+            quantidade de resíduos enviados a aterros sanitários.
+          </p> <br><br>
+
+          <img src="~/img/METAL_RECICLAR.jpg" alt="Peças de METAL" class="img-materiais">
+        </div>
+      </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <hr style="border: 3px solid #045002;">
+
+    <div class="container">
+      <div class="descripton-material">
+        <div id="oleo">
+          <h1>ÓLEO</h1> <br>
+
+          <p class="description">O óleo é uma substância líquida, geralmente de origem vegetal ou animal, utilizada
+            principalmente na culinária, mas também em produtos industriais e cosméticos. Os óleos têm propriedades como
+            alta viscosidade e capacidade de lubrificação.</p> <br><br>
+
+          <h3><strong>Principais Itens de Óleo no Dia a Dia:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Culinária:</strong> Óleos de cozinha, como óleo de soja, girassol e azeite de oliva.<br>
+
+            <strong>Produtos de Limpeza:</strong> Óleos essenciais e detergentes que contêm óleos.<br>
+
+            <strong>Cosméticos:</strong> Hidratantes, óleos para cabelo e óleos de banho.<br>
+
+            <strong>Combustíveis:</strong> Óleo diesel e biocombustíveis.<br><br>
+          </p>
+
+          <h3><strong>Reciclagem de Óleo:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Coleta:</strong> Separe o óleo usado em recipientes apropriados, como garrafas plásticas ou
+            recipientes específicos.<br>
+
+            <strong>Pontos de Coleta:</strong> Leve o óleo usado a centros de coleta ou pontos de reciclagem que aceitem
+            óleo. Muitas cidades têm programas específicos para isso.<br>
+
+            <strong>Processamento:</strong> O óleo reciclado pode ser purificado e reutilizado em biodiesel ou outros
+            produtos.<br><br><br>
+
+            A reciclagem de óleo é importante para evitar a contaminação do solo e da água, além de permitir o
+            reaproveitamento desse recurso valioso.
+          </p> <br><br>
+
+          <img src="~/img/oleo-reciclagem.jpg" alt="Reciclagem do óleo" width="600px">
+        </div>
+      </div>
+    </div>
 
 
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <hr style="border: 3px solid #045002;">
+
+    <div class="container">
+      <div class="descripton-material">
+        <div id="vidro">
+          <h1>VIDRO</h1> <br>
+
+          <p class="description">O vidro é um material sólido, transparente e resistente, feito principalmente de sílica
+            (areia), soda e cal. É amplamente utilizado devido à sua durabilidade, impermeabilidade e capacidade de ser
+            reciclado inúmeras vezes sem perder qualidade.
+          </p> <br><br>
+
+          <h3><strong>Principais Itens de Vidro no Dia a Dia</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Embalagens:</strong> Garrafas de bebidas, potes de conserva e frascos de alimentos.<br>
+
+            <strong>Utensílios:</strong> Copos, pratos e tigelas.<br>
+
+            <strong>Decoração:</strong> Vasos, jarras e objetos decorativos.<br>
+          </p>
+
+          <h3><strong>Reciclagem de Vidro:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Coleta:</strong> epare os itens de vidro limpos e secos. Evite misturar com outros materiais.<br>
+
+            <strong>Pontos de Coleta:</strong> Leve o vidro a centros de reciclagem ou pontos de coleta específicos para
+            vidro.
+            <br>
+
+            <strong>Processamento:</strong> O vidro reciclado é triturado, derretido e moldado em novas formas, como
+            garrafas ou frascos.
+            .<br><br><br>
+
+            A reciclagem de vidro economiza energia, reduz a necessidade de extração de matérias-primas e diminui a
+            quantidade de resíduos em aterros. Além disso, o vidro pode ser reciclado indefinidamente.
+          </p> <br><br>
+
+          <img src="~/img/vidro-reciclado.jpg" alt="Reciclagem do óleo" width="700px" height="350px">
+        </div>
+      </div>
+    </div>
 
 
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------->
 
+    <hr style="border: 3px solid #045002;">
 
+    <div class="container">
+      <div class="descripton-material">
+        <div id="aluminio">
+          <h1>ALUMÍNIO</h1> <br>
 
+          <p class="description">O alumínio é um metal leve, resistente à corrosão e altamente reciclável. Ele é
+            amplamente utilizado em diversos setores devido à sua versatilidade, durabilidade e propriedades condutoras.
+          </p> <br><br>
 
+          <h3><strong>Principais Itens de Alumínio no Dia a Dia:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Embalagens:</strong> Latas de bebidas, alimentos e papel alumínio.<br>
 
+            <strong>Utensílios de Cozinha:</strong> Panelas, assadeiras e recipientes para armazenamento.<br>
 
+            <strong>Construção Civil:</strong> Estruturas, janelas e revestimentos.<br>
+          </p>
 
+          <h3><strong>Reciclagem de Alumínio:</strong> <br><br></h3>
+          <p class="objective-text">
+            <strong>Coleta:</strong> Separe as embalagens e itens de alumínio limpos e secos.<br>
 
+            <strong>Pontos de Coleta:</strong> Leve o alumínio a centros de reciclagem ou pontos de coleta que aceitem
+            metais.<br>
 
-          <script>
-            const carousel = document.getElementById('carousel');
-            const indicators = document.getElementById('carouselIndicators').children;
-            let currentIndex = 0;
-            const totalSlides = carousel.children.length;
-          
-            document.getElementById('prevBtn').addEventListener('click', () => {
-              currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
-              updateCarousel();
-            });
-          
-            document.getElementById('nextBtn').addEventListener('click', () => {
-              currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
-              updateCarousel();
-            });
-          
-            for (let i = 0; i < indicators.length; i++) {
-              indicators[i].addEventListener('click', () => {
-                currentIndex = i;
-                updateCarousel();
-              });
-            }
-          
-            // Função para atualizar o carrossel
-            function updateCarousel() {
-              carousel.style.transform = `translateX(${-currentIndex * 100}%)`;
-              for (let i = 0; i < indicators.length; i++) {
-                indicators[i].classList.remove('active');
-              }
-              indicators[currentIndex].classList.add('active');
-            }
-          
-            // Adicionando a transição automática a cada 5 segundos
-            setInterval(() => {
-              currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
-              updateCarousel();
-            }, 5000); // 5000 milissegundos = 5 segundos
-          
-          </script>
+            <strong>Processamento:</strong> O alumínio reciclado é derretido e moldado em novos produtos.<br><br><br>
 
-    </main>
+            A reciclagem de alumínio é altamente eficiente, pois consome 95% menos energia do que a produção de alumínio
+            novo a partir de minérios. Além disso, pode ser reciclado indefinidamente, ajudando a reduzir a quantidade
+            de resíduos e a necessidade de extração de recursos naturais
+          </p> <br><br>
+
+          <img src="~/img/aluminio-reciclagem.jpg" alt="Reciclagem do óleo" width="700px" height="350px">
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="~/js/index.js" asp-append-version="true"></script>
 </body>
-
-
 
 </html>

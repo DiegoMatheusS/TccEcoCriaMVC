@@ -1,0 +1,103 @@
+.lista-noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    margin: 0;
+    padding-left: 12%;
+}
+
+.item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 350px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.titulo {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+a {
+    display: inline-block;
+    color: #50544e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn-mais {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #80CC28;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (máximo 768px) */
+@media (max-width: 768px) {
+    .lista-noticias {
+        padding-left: 0;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 400px;  /* Limite máximo de largura para garantir que as notícias não fiquem muito largas */
+        margin-bottom: 20px;
+    }
+
+    .titulo {
+        font-size: 1.2rem;
+        margin: 8px 0;
+    }
+
+    .btn-mais {
+        font-size: 0.9rem;
+    }
+}
+
+/* Para telas muito pequenas (máximo 480px) */
+@media (max-width: 480px) {
+    .item {
+        width: 100%;
+        max-width: 350px;  /* Ajuste para telas menores */
+        height: auto;  /* Deixa a altura do item flexível para acomodar conteúdo */
+        margin-bottom: 15px;
+    }
+
+    .titulo {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .btn-mais {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}

@@ -1,77 +1,129 @@
+/* Estilo para o contêiner de registro */
 .register-container {
   background-color: #4CAF50;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px; /* Ajuste para acomodar mais campos */
+  width: 400px; /* Largura fixa para manter o layout bonito */
   text-align: center;
-  margin: auto; /* Centraliza horizontalmente */
-  margin-bottom: 95px;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 45%; /* Distância para o fundo */
 }
 
 .register-container h2 {
   color: white;
+  font-weight: bold;
+  margin-bottom: 20px; /* Distância entre o título e os campos */
 }
 
+/* Estilo para os labels */
 .register-container label {
   color: white;
   display: block;
   text-align: left;
+  font-weight: bold;
   margin-bottom: 8px;
 }
 
+/* Estilo para os campos de texto, senha e email */
 .register-container input[type="text"],
 .register-container input[type="password"],
 .register-container input[type="email"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Mais arredondado para suavizar o visual */
   box-sizing: border-box;
+  font-size: 16px; /* Tamanho da fonte ajustado para melhorar a legibilidade */
+  background-color: #ffffff; /* Fundo branco para campos */
 }
 
+/* Flexbox para os grupos de campos */
 .register-container .input-group {
   display: flex;
   justify-content: space-between; /* Espaça os campos lado a lado */
+  gap: 10px; /* Adiciona espaçamento entre os campos */
 }
 
+/* Estilo dos divs dentro do .input-group */
 .register-container .input-group div {
   flex: 1; /* Para igualar a largura dos campos */
-  margin-right: 5px; /* Margem entre os campos */
 }
 
 .register-container .input-group div:last-child {
   margin-right: 0; /* Remove a margem do último campo */
 }
 
+/* Estilo para o botão de envio */
 .register-container input[type="submit"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: white;
+  font-weight: bold;
   color: #4CAF50;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 15px; /* Adiciona margem para distanciar do campo anterior */
+  margin-top: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
 }
 
-.register-container .input-group input {
-  margin-bottom: 0; /* Remove a margem inferior nos campos da input-group */
+.register-container input[type="submit"]:hover {
+  background-color: #2E7D32; /* Verde escuro ao passar o mouse */
+  color: white; /* Texto branco ao passar o mouse */
 }
 
+/* Estilo para o texto pequeno (link de login) */
 .small-text {
-  font-size: 12px; /* Define o tamanho da fonte */
-  color: white; /* Mantém a cor da fonte consistente */
-  margin-top: 15px; /* Espaço acima do texto */
+  font-size: 12px;
+  color: white;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 .small-text a {
-  color: white; /* Cor do link */
-  text-decoration: underline; /* Sublinha o texto */
+  color: white;
+  text-decoration: underline;
 }
 
 .small-text a:hover {
   color: #2E7D32; /* Altera a cor ao passar o mouse */
+  text-decoration: none; /* Remove a sublinhado no hover */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .register-container {
+    width: 90%; /* Ajusta a largura para telas menores */
+    margin-bottom: 20px; /* Diminui a margem inferior */
+  }
+
+  /* Ajusta o espaçamento dos campos de entrada */
+  .register-container input[type="text"],
+  .register-container input[type="password"],
+  .register-container input[type="email"] {
+    padding: 10px;
+  }
+
+  /* Ajusta o botão para telas pequenas */
+  .register-container input[type="submit"] {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Para telas muito pequenas, o layout deve ser mais compacto */
+  .register-container {
+    width: 95%; /* Aumenta a largura do contêiner */
+    margin-bottom: 15px; /* Reduz a margem inferior */
+  }
+
+  /* Reduz o espaçamento do texto pequeno */
+  .small-text {
+    font-size: 10px;
+  }
 }
