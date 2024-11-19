@@ -50,6 +50,16 @@ namespace EcoCriaMVC.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        [HttpGet]
+        public IActionResult Logout()
+    {
+    
+        HttpContext.Session.Clear();
+        TempData["Mensagem"] = "Usuário desconectado";
+        return RedirectToAction("Index", "Home");
+    }
+
     [HttpGet]
         public ActionResult IndexLogin()
         {
