@@ -101,7 +101,7 @@ nav ul {
 
 nav ul li a {
   font-size: 18px;
-  color: #979595;
+  color: #60c659;
   font-weight: 800;
   cursor: pointer;
   position: relative;
@@ -116,7 +116,7 @@ nav ul li a {
 
 nav ul li a:focus,
 nav ul li a:hover {
-  color: #60c659;
+  color: #979595;
 }
 
 nav ul li a:focus:after,
