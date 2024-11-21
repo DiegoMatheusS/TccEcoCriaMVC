@@ -26,7 +26,6 @@
   margin-bottom: 8px;
 }
 
-/* Estilo para os campos de texto e senha */
 .login-container input[type="text"],
 .login-container input[type="password"] {
   width: 100%;

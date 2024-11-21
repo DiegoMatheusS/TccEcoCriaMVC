@@ -22,12 +22,28 @@
             </ul>
         </nav>
 
-         <div class="login-dropdown">
-            <img src="~/img/pessoa.png" alt="Login" class="login-icon">
+        <div class="login-dropdown">
+    @if (Context.Session.GetString("SessionTokenUsuario") != null)
+    {
+        <!-- Se o usuário estiver autenticado, exibe o menu de perfil -->
+        <img src="~/img/pessoa.png" alt="Perfil" class="login-icon">
+        <div class="dropdown-content">
+            <a href="@Url.Action("Perfil", "Usuarios")">Perfil</a>
+            <a href="@Url.Action("Pontuacao", "Home")">Pontos</a>
+            <a href="@Url.Action("Logout", "Usuarios")">Sair</a>
+        </div>
+    }
+    else
+    {
+        <!-- Se o usuário não estiver autenticado, exibe as opções de login e registro -->
+        <img src="~/img/pessoa.png" alt="Login" class="login-icon">
         <div class="dropdown-content">
             <a href="@Url.Action("Index", "Usuarios")">Registrar-se</a>
             <a href="@Url.Action("IndexLogin", "Usuarios")">Login</a>
         </div>
+    }
+</div>
+
         </div>
         <div class="social-media">
              <a href="#"><img src="~/img/linkedin.png" alt="LinkedIn"></a>
