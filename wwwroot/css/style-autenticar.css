@@ -1,20 +1,23 @@
+/* Estilo para o contêiner de login */
 .login-container {
   background-color: #4CAF50;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px; /* Ajuste para acomodar mais campos */
+  width: 400px; /* Largura fixa para manter o layout bonito */
   text-align: center;
   margin: auto; /* Centraliza horizontalmente */
-  margin-bottom: 45%;
+  margin-bottom: 45%; /* Distância para o fundo */
   font-weight: bold;
 }
 
 .login-container h2 {
   color: white;
   font-weight: bold;
+  margin-bottom: 20px; /* Distância entre o título e os campos */
 }
 
+/* Estilo para os labels */
 .login-container label {
   color: white;
   display: block;
@@ -26,34 +29,39 @@
 .login-container input[type="text"],
 .login-container input[type="password"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Aumentado para melhor usabilidade */
   margin-bottom: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Arredondamento suave */
   box-sizing: border-box;
+  font-size: 16px; /* Tamanho da fonte ajustado */
+  background-color: #ffffff;
 }
 
+/* Estilo para o botão de envio */
 .login-container input[type="submit"] {
   width: 100%;
+  padding: 12px;
   margin-top: 15px;
-  padding: 10px;
   background-color: white;
   color: #4CAF50;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Botão com bordas arredondadas */
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
 }
 
-/* Mudança de cor ao passar o mouse sobre o botão */
+/* Estilo do botão ao passar o mouse */
 .login-container input[type="submit"]:hover {
-  background-color: #2E7D32;
-  color: white;
-  text-transform: bold;
+  background-color: #2E7D32; /* Cor verde escura */
+  color: white; /* Texto branco */
+  text-transform: uppercase;
   font-weight: bold;
 }
 
+/* Estilo do link para a página de registro */
 .login-container .register-link {
   display: block;
   margin-top: 10px;
@@ -65,4 +73,50 @@
 .login-container .register-link:hover {
   text-decoration: underline;
   font-weight: bold;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .login-container {
+    width: 90%; /* Ajusta a largura do contêiner */
+    margin-bottom: 20px; /* Reduz a margem inferior */
+  }
+
+  /* Ajusta os campos de entrada */
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    padding: 10px; /* Menos espaçamento em telas menores */
+  }
+
+  /* Ajusta o botão */
+  .login-container input[type="submit"] {
+    padding: 12px;
+    font-size: 14px; /* Diminui o tamanho da fonte */
+  }
+
+  /* Ajusta o link de registro */
+  .login-container .register-link {
+    font-size: 14px; /* Tamanho do texto do link */
+  }
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    width: 95%; /* Largura ajustada para telas muito pequenas */
+    margin-bottom: 15px; /* Menor margem inferior */
+  }
+
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    padding: 8px; /* Ajuste do preenchimento */
+  }
+
+  .login-container input[type="submit"] {
+    padding: 12px;
+    font-size: 13px; /* Diminui mais o tamanho da fonte */
+  }
+
+  .login-container .register-link {
+    font-size: 12px; /* Tamanho do texto do link reduzido */
+  }
 }

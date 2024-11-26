@@ -3,50 +3,65 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - EcoCriaMVC</title>
+    <title>EcoCria</title>
+    <link rel="icon" href="~/img/logo-eco-aba.png" type="image/x-icon" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/style-home.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/EcoCriaMVC.styles-home.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <div class="logo">
-           <a href="@Url.Action("Index", "Home")"><img src="~/img/logo-eco.png" alt="Eco Logo "></a> 
-        </div>
-        <nav>
-            <ul>
-                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
-                <li><a href="@Url.Action("Sobre", "Home")">Sobre</a></li>
-                <li><a href="@Url.Action("Pontos", "PontosDeRecebimento")">Pontos de Recebimento</a></li>
-                <li><a href="#">Notícias</a></li>
-            </ul>
-        </nav>
+    <div class="logo">
+        <a href="@Url.Action("Index", "Home")"><img src="~/img/logo-eco.png" alt="Eco Logo "></a> 
+    </div>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+            <li><a href="@Url.Action("Sobre", "Home")">Sobre</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Pontos">Pontos de Recebimento</a></li>
+            <li><a href="@Url.Action("Noticias", "Home")">Notícias</a></li>
+        </ul>
+    </nav>
 
-         <div class="login-dropdown">
+    <div class="login-dropdown">
+        @if (Context.Session.GetString("SessionTokenUsuario") != null)
+        {
+            var nomeUsuario = TempData["NomeUsuario"]?.ToString() ?? "Usuário";
+            <img src="~/img/pessoa.png" alt="Perfil" class="login-icon">
+            <div class="dropdown-content">
+                <span>@nomeUsuario</span> 
+                <span>Pontos</span> 
+                <a href="@Url.Action("Logout", "Usuarios")">Sair</a>
+            </div>
+        }
+        else
+        {
             <img src="~/img/pessoa.png" alt="Login" class="login-icon">
-        <div class="dropdown-content">
-            <a href="@Url.Action("Index", "Usuarios")">Registrar-se</a>
-            <a href="@Url.Action("IndexLogin", "Usuarios")">Login</a>
-        </div>
-        </div>
-        <div class="social-media">
-             <a href="#"><img src="~/img/linkedin.png" alt="LinkedIn"></a>
-            <a href="#"><img src="~/img/facebook.png" alt="Facebook"></a> 
-            <a href="#"><img src="~/img/instagram.png" alt="Instagram"></a> 
-        </div>
+            <div class="dropdown-content">
+                <a href="@Url.Action("Index", "Usuarios")">Registrar-se</a>
+                <a href="@Url.Action("IndexLogin", "Usuarios")">Login</a>
+            </div>
+        }
     </div>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+    <div class="social-media">
+        <a href="#"><img src="~/img/linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="~/img/facebook.png" alt="Facebook"></a> 
+        <a href="#"><img src="~/img/instagram.png" alt="Instagram"></a> 
     </div>
-    <footer class="footer">
-        <p>&copy; EcoCria - Desenvolvido por grupo TCC 2024 3-DS</p>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+</header>
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="footer">
+    <p>&copy; EcoCria - Desenvolvido por grupo TCC 2024 3-DS</p>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,21 @@
+@{
+    ViewBag.Title = "Validar Código";
+}
+
+<h2>Validar Código</h2>
+
+<!-- Exibir mensagem se houver -->
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Mensagem"]
+    </div>
+}
+
+<form method="post" action="@Url.Action("ValidarCodigo", "Usuarios")">
+    <div class="form-group">
+        <label for="codigo">Código de Recuperação</label>
+        <input type="text" id="codigo" name="codigo" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Validar Código</button>
+</form>
