@@ -1,0 +1,22 @@
+@{
+    ViewBag.Title = "Esqueci Minha Senha";
+}
+
+<h2>Esqueci Minha Senha</h2>
+
+<!-- Formulário para o usuário inserir o e-mail -->
+<form method="post" action="@Url.Action("ValidarCodigo", "Usuarios")">
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar Código</button>
+</form>
+
+<!-- Exibir mensagem se houver -->
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Mensagem"]
+    </div>
+}

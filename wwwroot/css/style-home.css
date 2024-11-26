@@ -52,6 +52,20 @@ body {
   color: white; 
   font-weight: bold; 
 }
+.dropdown-content span {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.dropdown-content span:hover {
+  background-color: #2E7D32; 
+  color: white; 
+  font-weight: bold; 
+}
 
 /* Estilo adicional para o ícone de login */
 .login-dropdown img {
