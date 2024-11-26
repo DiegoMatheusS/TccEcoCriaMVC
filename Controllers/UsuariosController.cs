@@ -67,37 +67,40 @@ namespace EcoCriaMVC.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> AutenticarAsync(Usuario u)
+    public async Task<ActionResult> AutenticarAsync(Usuario u)
+{
+    try
+    {
+        HttpClient httpClient = new HttpClient();
+        string uriComplementar = "Autenticar";
+
+        var content = new StringContent(JsonConvert.SerializeObject(u));
+        content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+        HttpResponseMessage response = await httpClient.PostAsync(uriBase + uriComplementar, content);
+
+        string serialized = await response.Content.ReadAsStringAsync();
+
+        if (response.StatusCode == System.Net.HttpStatusCode.OK)
         {
-            try
-            {
-                HttpClient httpClient = new HttpClient();
-                string uriComplementar = "Autenticar";
+            Usuario uLogado = JsonConvert.DeserializeObject<Usuario>(serialized);
+            HttpContext.Session.SetString("SessionTokenUsuario", uLogado.Token);
+            TempData["NomeUsuario"] = uLogado.NomeUsuario; // Adiciona o nome na TempData
 
-                var content = new StringContent(JsonConvert.SerializeObject(u));
-                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                HttpResponseMessage response = await httpClient.PostAsync(uriBase + uriComplementar, content);
-
-                string serialized = await response.Content.ReadAsStringAsync();
-
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                {
-                    Usuario uLogado = JsonConvert.DeserializeObject<Usuario>(serialized);
-                    HttpContext.Session.SetString("SessionTokenUsuario", uLogado.Token);
-                    TempData["Mensagem"] = string.Format("Bem-Vindo {0}!!", uLogado.NomeUsuario);
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    throw new System.Exception(serialized);
-                }
-            }
-            catch (System.Exception ex)
-            {
-                TempData["MensagemErro"] = ex.Message;
-                return IndexLogin();
-            }
+            TempData["Mensagem"] = string.Format("Bem-Vindo {0}!!", uLogado.NomeUsuario);
+            return RedirectToAction("Index", "Home");
         }
+        else
+        {
+            throw new System.Exception(serialized);
+        }
+    }
+    catch (System.Exception ex)
+    {
+        TempData["MensagemErro"] = ex.Message;
+        return IndexLogin();
+    }
+}
+
 
 
 
