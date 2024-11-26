@@ -25,9 +25,13 @@
         <div class="login-dropdown">
     @if (Context.Session.GetString("SessionTokenUsuario") != null)
     {
-        <!-- Se o usuário estiver autenticado, exibe o menu de perfil -->
+        // Obtendo o nome do usuário logado da sessão
+        var nomeUsuario = TempData["NomeUsuario"]?.ToString() ?? "Usuário";
+
+        <!-- Menu para usuário autenticado -->
         <img src="~/img/pessoa.png" alt="Perfil" class="login-icon">
         <div class="dropdown-content">
+            <p><strong>@nomeUsuario</strong></p> <!-- Exibe o nome do usuário -->
             <a href="@Url.Action("Perfil", "Usuarios")">Perfil</a>
             <a href="@Url.Action("Pontuacao", "Home")">Pontos</a>
             <a href="@Url.Action("Logout", "Usuarios")">Sair</a>
@@ -35,7 +39,7 @@
     }
     else
     {
-        <!-- Se o usuário não estiver autenticado, exibe as opções de login e registro -->
+        <!-- Opções para usuário não autenticado -->
         <img src="~/img/pessoa.png" alt="Login" class="login-icon">
         <div class="dropdown-content">
             <a href="@Url.Action("Index", "Usuarios")">Registrar-se</a>
@@ -43,6 +47,7 @@
         </div>
     }
 </div>
+
 
         </div>
         <div class="social-media">
