@@ -157,6 +157,37 @@ nav ul li a:hover:after {
 
 
 
+.login-dropdown.show .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.dropdown-content a:hover {
+  background-color: #2E7D32; 
+  color: white; 
+  font-weight: bold; 
+}
+.dropdown-content span {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.dropdown-content span:hover {
+  background-color: #2E7D32; 
+  color: white; 
+  font-weight: bold; 
+}
 
 
 

@@ -1,7 +1,16 @@
 /*---------------------------------------header-----------------------------------------------*/
+html, body {
+  height: 100%; /* Faz com que o corpo ocupe 100% da altura da tela */
+  margin: 0; /* Remove margens padrões */
+}
 
 body {
-  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;  /* Organiza o conteúdo em uma coluna */
+}
+
+.container {
+  flex: 1; /* Faz com que o conteúdo ocupe o restante do espaço disponível */
 }
 
 .hidden {
@@ -52,6 +61,7 @@ body {
   color: white; 
   font-weight: bold; 
 }
+
 .dropdown-content span {
   color: black;
   padding: 10px 16px;
@@ -72,6 +82,18 @@ body {
   border-radius: 50%; /* Mantém o ícone circular */
   border: 1px solid #ddd;
   padding: 5px;
+}
+
+/* Adicionando seta ao lado do ícone de login */
+.login-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px; /* Ajuste a posição para alinhar corretamente */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000; /* Cor da seta */
+  transform: translateY(-50%);
 }
 
 /* Estilos para os ícones de mídia social */
@@ -133,29 +155,25 @@ nav ul li a:hover {
   color: #979595;
 }
 
-nav ul li a:focus:after,
-nav ul li a:hover:after {
-  width: 100%;
-  left: 0%;
-}
-
 nav ul li a:after {
   content: "";
   pointer-events: none;
   bottom: -2px;
   left: 50%;
   position: absolute;
-  width: 0%;
+  width: 0;
   text-decoration: underline;
   height: 2px;
-  background-color: #fff;
+  background-color: #60c659; /* Cor do underline */
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
+  transition-duration: 0.4s;
   transition-property: width, left;
 }
 
-a:hover {
-  text-decoration: underline;
+nav ul li a:focus:after,
+nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 /* Social Media */
@@ -166,12 +184,12 @@ a:hover {
 .social-media img {
   width: 20px;
   height: auto;
-  filter: grayscale(100%);
+  filter: grayscale(100%); /* Deixa as imagens em preto e branco */
   transition: filter 0.3s;
 }
 
 .social-media img:hover {
-  filter: grayscale(0%);
+  filter: grayscale(0%); /* Restaura a cor original ao passar o mouse */
 }
 
 /* Mobile Responsiveness */
@@ -194,7 +212,7 @@ a:hover {
     margin-left: 0;
     top: 10px;
   }
-
+}
 
 @media (max-width: 500px) {
   header {
@@ -235,17 +253,18 @@ a:hover {
 
 /*-------------------footer-----------------------*/
 
-.footer {
-  background-color: #000000; /* Black background */
-  color: #ffffff; /* White text */
-  text-align: center; /* Center the text */
-  padding: 10px; /* Add some padding */
-  font-family: Arial, sans-serif; /* Set a font */
-  font-size: 14px; /* Set the font size */
-  bottom: 100%;
+footer.footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
   width: 100%;
   height: 50px;
-  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75); /* Adding shadow effect */
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+  position: relative;  /* Permite controle total sobre o posicionamento do rodapé */
+  bottom: 0; /* Posiciona o rodapé no fundo da tela */
 }
 
 .footer p {
@@ -261,7 +280,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Mobile Footer Styles */
 @media (max-width: 500px) {
   .footer {
     font-size: 12px;
