@@ -192,6 +192,10 @@ nav ul li a:hover:after {
   filter: grayscale(0%); /* Restaura a cor original ao passar o mouse */
 }
 
+.img-materiais {
+  width: 500px;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 1300px) {
   header {
@@ -200,8 +204,7 @@ nav ul li a:hover:after {
   }
 
   .nav-list,
-  .login-dropdown,
-  .social-media {
+  .login-dropdown {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -209,8 +212,23 @@ nav ul li a:hover:after {
   }
 
   .login-dropdown {
-    margin-left: 0;
-    top: 10px;
+    margin-left: 89%;
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    margin-left: 88%;
+    top: 100px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .img-materiais{
+    width: 90%;
   }
 }
 
@@ -233,7 +251,7 @@ nav ul li a:hover:after {
   }
 
   .login-dropdown {
-    margin-left: 0;
+    margin-left: 79%;
     top: 15px;
   }
 
@@ -242,12 +260,23 @@ nav ul li a:hover:after {
     gap: 8px;
   }
 
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    margin-left: 80%;
+    top: 100px;
+  }
+
   .social-media a {
     margin-left: 5px;
   }
 
   .social-media img {
     width: 18px;
+  }
+
+  .img-materiais{
+    width: 90%;
   }
 }
 
