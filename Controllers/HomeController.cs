@@ -1,8 +1,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using EcocriaMVC.Models;
 using EcoCriaMVC.Models;
 
-namespace EcoCriaMVC.Controllers;
+namespace EcocriaMVC.Controllers;
 
 public class HomeController : Controller
 {
@@ -25,13 +26,15 @@ public class HomeController : Controller
 
     public IActionResult Pontos()
     {
-        return View();
+        return RedirectToAction("ListarPontos", "Pontos");
     }
 
     public IActionResult Noticias()
     {
         return View();
     }
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

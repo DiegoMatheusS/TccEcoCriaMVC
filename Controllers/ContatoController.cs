@@ -13,7 +13,7 @@ namespace EcocriaMVC.Controllers
 {
     public class ContatoController : Controller
     {
-        public string uriBase = "http://www.ecocria.somee.com/Contato/";
+        public string uriBase = "http://www.ecocria.somee.com/Contato";
 
         [HttpPost]
         public async Task<IActionResult> EnviarAsync(Contato contato)

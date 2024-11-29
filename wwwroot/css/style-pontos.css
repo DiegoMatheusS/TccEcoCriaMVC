@@ -1,5 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: 'Inter', sans-serif;
   background-color: #e8f5e9;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  flex: 1;
+  flex-direction: column;
 }
 
 .container {
@@ -53,10 +84,10 @@ input, select {
 
 button {
   padding: 10px;
-  background-color: #FFFFFF;
-  color: #80CC28;
-  border-radius: 30px;
-  border-color: #80CC28;
+  background-color: #80CC28;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 1.1rem;
   transition: background-color 0.3s;
@@ -64,7 +95,6 @@ button {
 
 button:hover {
   background-color: #80CC28;
-  color: white;
 }
 
 .image-section {
@@ -77,14 +107,13 @@ button:hover {
   border-radius: 10px;
 }
 
-#map {
+#map{
   width: 500px;
   height: 500px;
   background: #ddd;
-  margin-top: 5%;
 }
 
-.result-item {
+.result-item{
   align-items: first baseline;
   font-size: 20px;
   display: flex;
@@ -94,13 +123,13 @@ button:hover {
   flex-direction: column;
 }
 
-.titulo-ponto {
+.titulo-ponto{
   font-size: 30px;
   font-weight: bold;
   margin-top: 30px;
 }
 
-.box-result {
+.box-result{
   display: flex;
   justify-content: space-between;
   background-color: #d1ebb0;
@@ -109,131 +138,4 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 80%;
   max-width: 1200px;
-}
-
-.to-top-ponto {
-  padding: 15px;
-  color: rgb(255, 255, 255);
-  right: 10px;
-  bottom: 10px;
-  position: fixed;
-  background-color: rgb(75, 194, 28);
-  border-radius: 60%;
-  opacity: 0;
-  pointer-events: none;
-  transition: all .4s;
-}
-
-.to-top-ponto.active {
-  right: 15px;
-  pointer-events: auto;
-  opacity: 1;
-}
-
-/* Media Queries para Responsividade */
-
-/* Para telas pequenas (máximo 768px) */
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-  }
-
-  .form-section,
-  .image-section {
-      width: 100%;
-      padding: 0;
-      margin-bottom: 20px;
-  }
-
-  .form-section h2 {
-      font-size: 1.5rem;
-  }
-
-  .form-section p,
-  .small-text {
-      font-size: 0.9rem;
-  }
-
-  input, select {
-      font-size: 0.9rem;
-  }
-
-  button {
-      font-size: 1rem;
-  }
-
-  #map {
-      width: 100%;
-      height: 300px;
-  }
-
-  .result-item {
-      font-size: 18px;
-      margin: 15px 0;
-  }
-
-  .titulo-ponto {
-      font-size: 1.8rem;
-  }
-
-  .box-result {
-      flex-direction: column;
-      padding: 20px;
-  }
-
-  .to-top-ponto {
-      right: 10px;
-      bottom: 10px;
-      font-size: 0.8rem;
-      padding: 12px;
-  }
-}
-
-/* Para telas muito pequenas (máximo 480px) */
-@media (max-width: 480px) {
-  .form-section h2 {
-      font-size: 1.3rem;
-  }
-
-  .form-section p,
-  .small-text {
-      font-size: 0.8rem;
-  }
-
-  input, select {
-      font-size: 0.85rem;
-      padding: 8px;
-  }
-
-  button {
-      font-size: 0.9rem;
-      padding: 8px;
-  }
-
-  #map {
-      height: 250px;
-  }
-
-  .result-item {
-      font-size: 16px;
-      margin: 10px 0;
-  }
-
-  .titulo-ponto {
-      font-size: 1.6rem;
-  }
-
-  .box-result {
-      flex-direction: column;
-      padding: 15px;
-  }
-
-  .to-top-ponto {
-      right: 5px;
-      bottom: 5px;
-      font-size: 0.7rem;
-      padding: 10px;
-  }
 }

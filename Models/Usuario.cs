@@ -23,8 +23,8 @@ namespace EcoCriaMVC.Models
         //public byte[]? FotoUsuario { get; set; }
         //public Usuario? Usuario { get; set; }
 
-        [JsonIgnore]
-        public List<Parceiros> Parceiros { get; set; } = new List<Parceiros>();
+        //[JsonIgnore]
+        //public List<Parceiros> Parceiros { get; set; } = new List<Parceiros>();
         //using System.Collections.Generic;
 
 
