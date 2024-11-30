@@ -1,4 +1,10 @@
+using Microsoft.Extensions.DependencyInjection;
+using TccEcoCriaMVC.Message;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Registra o EmailHelper no container de DI (Dependency Injection)
+builder.Services.AddSingleton<EmailHelper>();
 
 // Adiciona suporte ao MVC (Controllers e Views)
 builder.Services.AddControllersWithViews();
@@ -14,15 +20,18 @@ builder.Services.AddSession(options =>
 // Registra o HttpClient para ser injetado em controladores e serviços
 builder.Services.AddHttpClient(); // Adiciona HttpClient para realizar requisições HTTP
 
-var app = builder.Build();
-
 // Configurações de ambiente (se não estiver no ambiente de desenvolvimento)
-if (!app.Environment.IsDevelopment())
+if (!builder.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error"); // Página de erro personalizada
-    app.UseHsts(); // HSTS (HTTP Strict Transport Security)
+    builder.Services.AddExceptionHandler(options =>
+    {
+        options.ExceptionHandlingPath = "/Home/Error"; // Especifica a rota para a página de erro personalizada
+    });
 }
 
+var app = builder.Build();
+
+// Configura o middleware de requisição/response
 // Redireciona para HTTPS e permite o uso de arquivos estáticos
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -33,11 +42,11 @@ app.UseRouting();
 // Configurações para o uso da sessão
 app.UseSession();
 
-// Configuração de autenticação e autorização
+// Configuração de autenticação e autorização (se necessário)
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Definição do roteamento para controladores
+// Definição do roteamento para controladores (MVC)
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

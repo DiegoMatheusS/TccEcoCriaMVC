@@ -39,7 +39,7 @@ namespace EcoCriaMVC.Models
         [NotMapped]
         public string Token { get; set; } = string.Empty;
 
-         public string CodigoRecuperacao { get; set; } = string.Empty; // Código de recuperação
-        public DateTime? DataCodigoExpiracao { get; set; } // Data de expiração do código
+        public string CodigoRecuperacao { get; set; }
+        public DateTime? ExpiracaoCodigo { get; set; }
     }
 }

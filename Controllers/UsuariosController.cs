@@ -5,24 +5,28 @@ using System.Threading.Tasks;
 using EcoCriaMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using TccEcoCriaMVC.Message;
 
 namespace EcoCriaMVC.Controllers
 {
     public class UsuariosController : Controller
     {
         private readonly HttpClient _httpClient; // Cliente HTTP injetado
-        private string uriBase = "http://ecocria.somee.com/Usuarios/";
 
-        public UsuariosController(HttpClient httpClient)
+        private readonly EmailHelper _emailHelper;
+        private string uriBase = "http://Testemvc.somee.com/Usuarios/";
+
+        public UsuariosController(HttpClient httpClient, EmailHelper emailHelper)
         {
             _httpClient = httpClient;
+            _emailHelper = emailHelper;
         }
 
         // Exibir a página de cadastro de usuário
         [HttpGet]
         public IActionResult Index()
         {
-            
+
             return View("CadastrarUsuario");
         }
 
@@ -73,40 +77,40 @@ namespace EcoCriaMVC.Controllers
 
 
         // Autenticar o usuário
-[HttpPost]
-public async Task<ActionResult> AutenticarAsync(Usuario u)
-{
-    try
-    {
-        var content = new StringContent(JsonConvert.SerializeObject(u));
-        content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-        HttpResponseMessage response = await _httpClient.PostAsync(uriBase + "Autenticar", content);
-
-        string serialized = await response.Content.ReadAsStringAsync();
-
-        if (response.StatusCode == System.Net.HttpStatusCode.OK)
+        [HttpPost]
+        public async Task<ActionResult> AutenticarAsync(Usuario u)
         {
-            Usuario uLogado = JsonConvert.DeserializeObject<Usuario>(serialized);
-            HttpContext.Session.SetString("SessionTokenUsuario", uLogado.Token);
-            TempData["EmailUsuario"] = uLogado.EmailUsuario;
+            try
+            {
+                var content = new StringContent(JsonConvert.SerializeObject(u));
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                HttpResponseMessage response = await _httpClient.PostAsync(uriBase + "Autenticar", content);
 
-            // Armazena o nome do usuário na TempData
-            TempData["NomeUsuario"] = uLogado.NomeUsuario;
+                string serialized = await response.Content.ReadAsStringAsync();
 
-            TempData["Mensagem"] = string.Format("Bem-vindo {0}!!", uLogado.NomeUsuario);
-            return RedirectToAction("Index", "Home");
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    Usuario uLogado = JsonConvert.DeserializeObject<Usuario>(serialized);
+                    HttpContext.Session.SetString("SessionTokenUsuario", uLogado.Token);
+                    TempData["EmailUsuario"] = uLogado.EmailUsuario;
+
+                    // Armazena o nome do usuário na TempData
+                    TempData["NomeUsuario"] = uLogado.NomeUsuario;
+
+                    TempData["Mensagem"] = string.Format("Bem-vindo {0}!!", uLogado.NomeUsuario);
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    throw new Exception(serialized);
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return IndexLogin();
+            }
         }
-        else
-        {
-            throw new Exception(serialized);
-        }
-    }
-    catch (Exception ex)
-    {
-        TempData["MensagemErro"] = ex.Message;
-        return IndexLogin();
-    }
-}
 
 
         // Exibir a página de "Esqueci minha senha"
@@ -116,23 +120,65 @@ public async Task<ActionResult> AutenticarAsync(Usuario u)
             return View();
         }
 
-        // Enviar código para o e-mail do usuário
         [HttpPost]
         public async Task<IActionResult> EnviarCodigoParaValidacao(string email)
         {
-            var url = $"{uriBase}/EsqueciSenha";  // URL da API de envio do código
-            var content = new StringContent(JsonConvert.SerializeObject(new { Email = email }), Encoding.UTF8, "application/json");
-
-            var response = await _httpClient.PostAsync(url, content);
-            if (response.IsSuccessStatusCode)
+            try
             {
-                TempData["Mensagem"] = "Código de recuperação enviado para o seu e-mail.";
-                return RedirectToAction("ValidarCodigo"); // Redireciona para a página de validação do código
-            }
+                // Criar um objeto Usuario apenas com o e-mail
+                var usuario = new Usuario { EmailUsuario = email };
 
-            TempData["MensagemErro"] = "Erro ao enviar o código. Tente novamente.";
-            return View();
+                // Serializar o objeto para enviar para a API
+                var content = new StringContent(JsonConvert.SerializeObject(usuario), Encoding.UTF8, "application/json");
+
+                // Enviar a requisição para a API
+                var response = await _httpClient.PostAsync(uriBase + "SalvarCodigo", content); // API para salvar o código
+
+                // Verificar se a resposta foi bem-sucedida
+                if (!response.IsSuccessStatusCode)
+                {
+                    string responseContent = await response.Content.ReadAsStringAsync();
+                    TempData["MensagemErro"] = $"Erro ao salvar o código de recuperação: {responseContent}";
+                    return View("EsqueciSenha");
+                }
+
+                // Gerar o código de recuperação e enviar e-mail
+                var codigoRecuperacao = GerarCodigoRecuperacao();
+                var mensagem = $"Seu código de recuperação de senha é: {codigoRecuperacao}. Ele expirará em 30 minutos.";
+
+                // Enviar e-mail
+                var emailModel = new TccEcoCriaMVC.Models.Email
+                {
+                    Remetente = "ecocria2024@gmail.com",
+                    Destinatario = email,
+                    Assunto = "Recuperação de Senha - EcoCria",
+                    Mensagem = mensagem
+                };
+
+                await _emailHelper.EnviarEmail(emailModel);
+
+                TempData["Mensagem"] = "Código de recuperação enviado para o seu e-mail.";
+                return RedirectToAction("ValidarCodigo");
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = $"Erro ao enviar código de recuperação: {ex.Message}";
+                return View("EsqueciSenha");
+            }
         }
+
+
+
+
+
+        // Método para gerar o código de recuperação
+        private string GerarCodigoRecuperacao()
+        {
+            Random random = new Random();
+            return random.Next(100000, 999999).ToString(); // Gera um código numérico aleatório de 6 dígitos
+        }
+
+
 
         // Exibir a página de "Validar código"
         [HttpGet]
@@ -185,6 +231,6 @@ public async Task<ActionResult> AutenticarAsync(Usuario u)
         }
 
 
-        
+
     }
 }
