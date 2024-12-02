@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using EcoCriaMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using TccEcoCriaMVC.Message;
+using System.Text.Json;
+
 
 namespace EcoCriaMVC.Controllers
 {
@@ -13,13 +14,11 @@ namespace EcoCriaMVC.Controllers
     {
         private readonly HttpClient _httpClient; // Cliente HTTP injetado
 
-        private readonly EmailHelper _emailHelper;
         private string uriBase = "http://Testemvc.somee.com/Usuarios/";
 
-        public UsuariosController(HttpClient httpClient, EmailHelper emailHelper)
+        public UsuariosController(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _emailHelper = emailHelper;
         }
 
         // Exibir a página de cadastro de usuário
@@ -112,125 +111,56 @@ namespace EcoCriaMVC.Controllers
             }
         }
 
+ // Exibir a página de recuperação de senha
+    [HttpGet]
+    public IActionResult RecuperarSenha()
+    {
+        return View();
+    }
 
-        // Exibir a página de "Esqueci minha senha"
-        [HttpGet]
-        public IActionResult EsqueciSenha()
+[HttpPost]
+public async Task<IActionResult> RecuperarSenha(Usuario modelo)
+{
+    try
+    {
+        var content = new StringContent(JsonConvert.SerializeObject(modelo));
+        content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+        // Envia a requisição POST para a API sem incluir um token JWT
+        HttpResponseMessage response = await _httpClient.PostAsync(uriBase + "RecuperarSenha", content); // Mudança para POST
+
+        Console.WriteLine($"Resposta da API: {response.StatusCode}");
+        string responseContent = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"Mensagem: {responseContent}");
+
+        if (response.IsSuccessStatusCode)
         {
-            return View();
+            TempData["Mensagem"] = responseContent; // Sucesso
+            return RedirectToAction("IndexLogin"); // Redireciona para login
         }
-
-        [HttpPost]
-        public async Task<IActionResult> EnviarCodigoParaValidacao(string email)
+        else
         {
-            try
-            {
-                // Criar um objeto Usuario apenas com o e-mail
-                var usuario = new Usuario { EmailUsuario = email };
-
-                // Serializar o objeto para enviar para a API
-                var content = new StringContent(JsonConvert.SerializeObject(usuario), Encoding.UTF8, "application/json");
-
-                // Enviar a requisição para a API
-                var response = await _httpClient.PostAsync(uriBase + "SalvarCodigo", content); // API para salvar o código
-
-                // Verificar se a resposta foi bem-sucedida
-                if (!response.IsSuccessStatusCode)
-                {
-                    string responseContent = await response.Content.ReadAsStringAsync();
-                    TempData["MensagemErro"] = $"Erro ao salvar o código de recuperação: {responseContent}";
-                    return View("EsqueciSenha");
-                }
-
-                // Gerar o código de recuperação e enviar e-mail
-                var codigoRecuperacao = GerarCodigoRecuperacao();
-                var mensagem = $"Seu código de recuperação de senha é: {codigoRecuperacao}. Ele expirará em 30 minutos.";
-
-                // Enviar e-mail
-                var emailModel = new TccEcoCriaMVC.Models.Email
-                {
-                    Remetente = "ecocria2024@gmail.com",
-                    Destinatario = email,
-                    Assunto = "Recuperação de Senha - EcoCria",
-                    Mensagem = mensagem
-                };
-
-                await _emailHelper.EnviarEmail(emailModel);
-
-                TempData["Mensagem"] = "Código de recuperação enviado para o seu e-mail.";
-                return RedirectToAction("ValidarCodigo");
-            }
-            catch (Exception ex)
-            {
-                TempData["MensagemErro"] = $"Erro ao enviar código de recuperação: {ex.Message}";
-                return View("EsqueciSenha");
-            }
+            TempData["MensagemErro"] = responseContent; // Mensagem de erro da API
+            return View(modelo); // Retorna à mesma view com erro
         }
+    }
+    catch (Exception ex)
+    {
+        TempData["MensagemErro"] = $"Erro: {ex.Message}";
+        return View(modelo); // Retorna à view com erro
+    }
+}
 
 
 
 
 
-        // Método para gerar o código de recuperação
-        private string GerarCodigoRecuperacao()
-        {
-            Random random = new Random();
-            return random.Next(100000, 999999).ToString(); // Gera um código numérico aleatório de 6 dígitos
-        }
 
 
 
-        // Exibir a página de "Validar código"
-        [HttpGet]
-        public IActionResult ValidarCodigo()
-        {
-            return View(); // Exibe a página para inserir o código de validação
-        }
-
-        // Validar o código de recuperação
-        [HttpPost]
-        public async Task<IActionResult> ValidarCodigo(string email, string codigo)
-        {
-            var url = $"{uriBase}/ValidarCodigo";  // URL da API de validação do código
-            var content = new StringContent(JsonConvert.SerializeObject(new { Email = email, Codigo = codigo }), Encoding.UTF8, "application/json");
-
-            var response = await _httpClient.PostAsync(url, content);
-            if (response.IsSuccessStatusCode)
-            {
-                TempData["Mensagem"] = "Código validado com sucesso. Agora, altere sua senha.";
-                return RedirectToAction("MudandoSenha");
-            }
-
-            TempData["MensagemErro"] = "Código inválido ou expirado. Tente novamente.";
-            return View();
-        }
-
-        // Exibir a página para alterar a senha
-        [HttpGet]
-        public IActionResult MudandoSenha()
-        {
-            return View();
-        }
-
-        // Alterar a senha do usuário
-        [HttpPost]
-        public async Task<IActionResult> MudandoSenha(string codigo, string novaSenha, string confirmarSenha)
-        {
-            var url = $"{uriBase}/MudandoSenha";  // URL da API de mudança de senha
-            var content = new StringContent(JsonConvert.SerializeObject(new { Codigo = codigo, NovaSenha = novaSenha, ConfirmarSenha = confirmarSenha }), Encoding.UTF8, "application/json");
-
-            var response = await _httpClient.PostAsync(url, content);
-            if (response.IsSuccessStatusCode)
-            {
-                TempData["Mensagem"] = "Senha alterada com sucesso.";
-                return RedirectToAction("Login");
-            }
-
-            TempData["MensagemErro"] = "Erro ao alterar a senha. Tente novamente.";
-            return View();
-        }
 
 
 
     }
 }
+

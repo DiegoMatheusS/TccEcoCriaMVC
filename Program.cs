@@ -1,10 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
-using TccEcoCriaMVC.Message;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Registra o EmailHelper no container de DI (Dependency Injection)
-builder.Services.AddSingleton<EmailHelper>();
 
 // Adiciona suporte ao MVC (Controllers e Views)
 builder.Services.AddControllersWithViews();
