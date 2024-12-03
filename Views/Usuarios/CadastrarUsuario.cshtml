@@ -1,12 +1,9 @@
-<!--Namespace da classe de Modelo-->
 @model EcoCriaMVC.Models.Usuario
 
-<!--Título da View-->
 @{
     ViewBag.Title = "Registrar";
 }
 
-<!--Configuração de mensagem temporária-->
 @if (@TempData["MensagemErro"] != null)
 {
     <div class="alert alert-danger" role="alert">
@@ -14,12 +11,10 @@
     </div>
 }
 <link rel="stylesheet" href="~/css/style-cadastrar.css" asp-append-version="true" />
-<!-- Estilos customizados para o layout de cadastro -->
 <div class="register-container">
     <h2>Criar Conta</h2>
     <hr />
 
-    <!-- Método que será chamado se o usuário fizer o Post -->
     @using (Html.BeginForm("Registrar", "Usuarios", FormMethod.Post))
     {
         @Html.AntiForgeryToken()

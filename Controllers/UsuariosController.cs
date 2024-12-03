@@ -12,7 +12,7 @@ namespace EcoCriaMVC.Controllers
 {
     public class UsuariosController : Controller
     {
-        private readonly HttpClient _httpClient; // Cliente HTTP injetado
+        private readonly HttpClient _httpClient;
 
         private string uriBase = "http://ecocria.somee.com/Usuarios/";
 
@@ -21,7 +21,7 @@ namespace EcoCriaMVC.Controllers
             _httpClient = httpClient;
         }
 
-        // Exibir a página de cadastro de usuário
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -29,7 +29,7 @@ namespace EcoCriaMVC.Controllers
             return View("CadastrarUsuario");
         }
 
-        // Registrar um novo usuário
+
         [HttpPost]
         public async Task<ActionResult> RegistrarAsync(Usuario u)
         {
@@ -58,7 +58,7 @@ namespace EcoCriaMVC.Controllers
             }
         }
 
-        // Logout do usuário
+
         [HttpGet]
         public IActionResult Logout()
         {
@@ -67,7 +67,7 @@ namespace EcoCriaMVC.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        // Exibir a página de login
+
         [HttpGet]
         public ActionResult IndexLogin()
         {
@@ -75,7 +75,7 @@ namespace EcoCriaMVC.Controllers
         }
 
 
-        // Autenticar o usuário
+
         [HttpPost]
         public async Task<ActionResult> AutenticarAsync(Usuario u)
         {
@@ -93,7 +93,7 @@ namespace EcoCriaMVC.Controllers
                     HttpContext.Session.SetString("SessionTokenUsuario", uLogado.Token);
                     TempData["EmailUsuario"] = uLogado.EmailUsuario;
 
-                    // Armazena o nome do usuário na TempData
+
                     TempData["NomeUsuario"] = uLogado.NomeUsuario;
 
                     TempData["Mensagem"] = string.Format("Bem-vindo {0}!!", uLogado.NomeUsuario);
@@ -126,7 +126,7 @@ namespace EcoCriaMVC.Controllers
                 var content = new StringContent(JsonConvert.SerializeObject(modelo));
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-                HttpResponseMessage response = await _httpClient.PostAsync(uriBase + "RecuperarSenha", content); // Mudança para POST
+                HttpResponseMessage response = await _httpClient.PostAsync(uriBase + "RecuperarSenha", content);
 
                 Console.WriteLine($"Resposta da API: {response.StatusCode}");
                 string responseContent = await response.Content.ReadAsStringAsync();

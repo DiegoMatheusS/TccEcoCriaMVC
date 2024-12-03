@@ -31,7 +31,6 @@ namespace EcocriaMVC.Controllers
                     
                     if (response.IsSuccessStatusCode)
                     {
-                        // Usar TempData para armazenar a mensagem de sucesso
                         TempData["Mensagem"] = "Enviado com sucesso";
                     }
                 else

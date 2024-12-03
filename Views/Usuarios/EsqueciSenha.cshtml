@@ -1,6 +1,5 @@
 <h2>Digite Seu Email para recuperação de Senha</h2>
 
-<!-- Formulário para o usuário inserir o e-mail -->
 <form method="post" action="@Url.Action("EnviarCodigoParaValidacao", "Usuarios")">
     <div class="form-group">
         <label for="email">E-mail</label>
@@ -9,7 +8,6 @@
     <button type="submit" class="btn btn-primary">Enviar Código</button>
 </form>
 
-<!-- Exibir mensagem se houver -->
 @if (TempData["Mensagem"] != null)
 {
     <div class="alert alert-info">

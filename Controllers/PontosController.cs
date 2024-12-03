@@ -49,7 +49,7 @@ namespace EcocriaMVC.Controllers
         {
             try
             {
-                string uriComplementar = $"{idPonto}"; // Supondo que a API tenha um endpoint para obter um ponto pelo ID
+                string uriComplementar = $"{idPonto}"; 
                 HttpClient httpClient = new HttpClient();
 
                 HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
@@ -57,18 +57,18 @@ namespace EcocriaMVC.Controllers
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    Pontos ponto = JsonConvert.DeserializeObject<Pontos>(serialized); // Desserializar para um único ponto
+                    Pontos ponto = JsonConvert.DeserializeObject<Pontos>(serialized); 
                     return View(ponto);
                 }
                 else
                 {
-                    throw new System.Exception(serialized); // Tratar o erro caso a API retorne algo inesperado
+                    throw new System.Exception(serialized);
                 }
             }
             catch (System.Exception ex)
             {
-                TempData["MensagemErro"] = ex.Message; // Salvar mensagem de erro temporariamente
-                return RedirectToAction("Index"); // Redirecionar para a página principal ou outra
+                TempData["MensagemErro"] = ex.Message; 
+                return RedirectToAction("Index"); 
             }
         }
 

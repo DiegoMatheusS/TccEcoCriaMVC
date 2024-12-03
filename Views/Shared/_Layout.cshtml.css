@@ -10,7 +10,7 @@ body {
   background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Garante que o body tenha no mínimo a altura da janela */
+  min-height: 100vh; 
 }
 
 /* --------------------------------------- Header --------------------------------------- */
@@ -283,7 +283,7 @@ nav ul li a:hover:after {
 }
 
 .material:hover img {
-  border: 5px solid #006eff; /* Borda azul ao passar o mouse */
+  border: 5px solid #006eff; 
 }
 
 .material input:checked + img {
@@ -292,8 +292,8 @@ nav ul li a:hover:after {
 
 /* ---------------------------- Footer ---------------------------- */
 .footer {
-  background-color: #000000; /* Black background */
-  color: #ffffff; /* White text */
+  background-color: #000000; 
+  color: #ffffff; 
   text-align: center;
   padding: 10px;
   font-family: Arial, sans-serif;
@@ -329,7 +329,7 @@ nav ul li a:hover:after {
   }
 
   .materials {
-    grid-template-columns: repeat(2, 1fr); /* Ajusta para duas colunas em telas médias */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .discard-section {
@@ -349,11 +349,11 @@ nav ul li a:hover:after {
   }
 
   .materials {
-    grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    grid-template-columns: 1fr; 
   }
 
   .intro-section {
-    height: 250px; /* Menor altura em dispositivos móveis */
+    height: 250px;
   }
 
   .discard-section {

@@ -1,6 +1,5 @@
 @model EcoCriaMVC.Models.Usuario
 
-<!-- Exibir mensagem se houver -->
 @if (TempData["Mensagem"] != null)
 {
     <div class="alert alert-info">
@@ -17,25 +16,21 @@
 
 @using (Html.BeginForm("RecuperarSenha", "Usuarios", FormMethod.Post))
 {
-    @Html.AntiForgeryToken()  <!-- Proteção CSRF -->
+    @Html.AntiForgeryToken()  
     
-    <!-- Campo oculto para enviar como PUT -->
     <input type="hidden" name="_method" value="PUT" />
 
     <div class="form-horizontal">
-        <!-- Campo E-mail -->
         <div class="form-group">
             <label for="EmailUsuario">E-mail:</label>
             @Html.EditorFor(model => model.EmailUsuario, new { htmlAttributes = new { @class = "form-control", @placeholder = "Digite seu e-mail" } })
         </div>
 
-        <!-- Campo Nova Senha -->
         <div class="form-group">
             <label for="PasswordUsuario">Nova Senha:</label>
             @Html.PasswordFor(model => model.PasswordUsuario, new { @class = "form-control", @placeholder = "Digite a nova senha" })
         </div>
 
-        <!-- Botão de Enviar -->
         <input type="submit" value="Redefinir Senha" class="btn btn-primary" />
     </div>
 }
