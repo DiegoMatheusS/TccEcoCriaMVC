@@ -14,7 +14,7 @@ namespace EcoCriaMVC.Controllers
     {
         private readonly HttpClient _httpClient; // Cliente HTTP injetado
 
-        private string uriBase = "http://Testemvc.somee.com/Usuarios/";
+        private string uriBase = "http://ecocria.somee.com/Usuarios/";
 
         public UsuariosController(HttpClient httpClient)
         {
@@ -111,54 +111,44 @@ namespace EcoCriaMVC.Controllers
             }
         }
 
- // Exibir a página de recuperação de senha
-    [HttpGet]
-    public IActionResult RecuperarSenha()
-    {
-        return View();
-    }
 
-[HttpPost]
-public async Task<IActionResult> RecuperarSenha(Usuario modelo)
-{
-    try
-    {
-        var content = new StringContent(JsonConvert.SerializeObject(modelo));
-        content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+           /* [HttpGet]
+            public IActionResult RecuperarSenha()
+            {
+                return View();
+            }
 
-        // Envia a requisição POST para a API sem incluir um token JWT
-        HttpResponseMessage response = await _httpClient.PostAsync(uriBase + "RecuperarSenha", content); // Mudança para POST
-
-        Console.WriteLine($"Resposta da API: {response.StatusCode}");
-        string responseContent = await response.Content.ReadAsStringAsync();
-        Console.WriteLine($"Mensagem: {responseContent}");
-
-        if (response.IsSuccessStatusCode)
+        [HttpPost]
+        public async Task<IActionResult> RecuperarSenha(Usuario modelo)
         {
-            TempData["Mensagem"] = responseContent; // Sucesso
-            return RedirectToAction("IndexLogin"); // Redireciona para login
-        }
-        else
-        {
-            TempData["MensagemErro"] = responseContent; // Mensagem de erro da API
-            return View(modelo); // Retorna à mesma view com erro
-        }
-    }
-    catch (Exception ex)
-    {
-        TempData["MensagemErro"] = $"Erro: {ex.Message}";
-        return View(modelo); // Retorna à view com erro
-    }
-}
+            try
+            {
+                var content = new StringContent(JsonConvert.SerializeObject(modelo));
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
+                HttpResponseMessage response = await _httpClient.PostAsync(uriBase + "RecuperarSenha", content); // Mudança para POST
 
+                Console.WriteLine($"Resposta da API: {response.StatusCode}");
+                string responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Mensagem: {responseContent}");
 
-
-
-
-
-
-
+                if (response.IsSuccessStatusCode)
+                {
+                    TempData["Mensagem"] = responseContent; 
+                    return RedirectToAction("IndexLogin"); 
+                }
+                else
+                {
+                    TempData["MensagemErro"] = responseContent;
+                    return View(modelo); 
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = $"Erro: {ex.Message}";
+                return View(modelo); // Retorna à view com erro
+            }
+        }*/
 
 
     }
