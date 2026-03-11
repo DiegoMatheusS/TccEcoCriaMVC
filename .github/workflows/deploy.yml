@@ -1,0 +1,24 @@
+name: Gerar Publish Somee
+
+on:
+  workflow_dispatch: # Cria o botão manual
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x' # Ou 6.0 / 7.0 dependendo do seu projeto
+
+      - name: Publish
+        run: dotnet publish -c Release -o ./publish_pasta
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pacote_para_somee
+          path: ./publish_pasta
