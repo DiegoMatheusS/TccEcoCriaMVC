@@ -13,7 +13,7 @@ namespace EcocriaMVC.Controllers
 {
     public class PontosController : Controller
     {
-        public string uriBase = "http://www.ecocria.somee.com/Pontos/";
+        public string uriBase = "http://ecocria.somee.com/Pontos/";
 
         [HttpGet]
         public async Task<IActionResult> ListarPontos()

@@ -14,7 +14,7 @@ namespace EcocriaMVC.Controllers
 {
     public class DescarteController : Controller
     {
-        public string uriBase = "http://www.ecocria.somee.com/ColetaItens";
+        public string uriBase = "http://ecocria.somee.com/ColetaItens";
 
         [HttpPost]
         public async Task<IActionResult> RealizarDescarte(ColetaItens coletaItens)
