@@ -14,7 +14,7 @@ namespace EcoCriaMVC.Controllers
     {
         private readonly HttpClient _httpClient;
 
-        private string uriBase = "http://ecocria.somee.com/Usuarios/";
+        private string uriBase = "http://api-ecocria.somee.com/Usuarios/";
 
         public UsuariosController(HttpClient httpClient)
         {
