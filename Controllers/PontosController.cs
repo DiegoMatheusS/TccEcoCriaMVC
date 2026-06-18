@@ -39,7 +39,7 @@ namespace EcocriaMVC.Controllers
             catch (System.Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
         }
         
@@ -68,9 +68,12 @@ namespace EcocriaMVC.Controllers
             catch (System.Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message; 
-                return RedirectToAction("Index"); 
+                return RedirectToAction("Index", "Home");
             }
         }
+
+
+
 
 
     }
