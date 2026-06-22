@@ -1,6 +1,5 @@
 @model IEnumerable<EcocriaMVC.Models.Pontos>
 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -12,6 +11,8 @@
   <link rel="stylesheet" href="~/css/style.css" />
   <link rel="stylesheet" href="~/css/style-pontos.css" />
   <link rel="icon" href="~/img/ecocriaimg.png" />
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
@@ -53,91 +54,32 @@
           <label for="produto">Produto</label>
           <select id="produto" required>
             <option disabled selected>Selecione o produto</option>
-            <option value="ponto de coleta de eletronico"
-              selected="@(produtoSelecionado == "Eletrônico" ? "selected" : null)">Eletrônico</option>
-            <option value="ponto de coleta de organico"
-              selected="@(produtoSelecionado == "Orgânico" ? "selected" : null)">Orgânico</option>
-            <option value="ponto de coleta de plastico"
-              selected="@(produtoSelecionado == "Plástico" ? "selected" : null)">Plástico</option>
-            <option value="ponto de coleta de metal" selected="@(produtoSelecionado == "Metal" ? "selected" : null)">
-              Metal</option>
-            <option value="ponto de coleta de vidro" selected="@(produtoSelecionado == "Vidro" ? "selected" : null)">
-              Vidro</option>
-            <option value="ponto de coleta de aluminio"
-              selected="@(produtoSelecionado == "Alumínio" ? "selected" : null)">Alumínio</option>
-            <option value="ponto de coleta de papel" selected="@(produtoSelecionado == "Papel" ? "selected" : null)">
-              Papel</option>
+            <option value="ponto de coleta de eletronico" selected="@(produtoSelecionado == "Eletrônico" ? "selected" : null)">Eletrônico</option>
+            <option value="ponto de coleta de organico" selected="@(produtoSelecionado == "Orgânico" ? "selected" : null)">Orgânico</option>
+            <option value="ponto de coleta de plastico" selected="@(produtoSelecionado == "Plástico" ? "selected" : null)">Plástico</option>
+            <option value="ponto de coleta de metal" selected="@(produtoSelecionado == "Metal" ? "selected" : null)">Metal</option>
+            <option value="ponto de coleta de vidro" selected="@(produtoSelecionado == "Vidro" ? "selected" : null)">Vidro</option>
+            <option value="ponto de coleta de aluminio" selected="@(produtoSelecionado == "Alumínio" ? "selected" : null)">Alumínio</option>
+            <option value="ponto de coleta de papel" selected="@(produtoSelecionado == "Papel" ? "selected" : null)">Papel</option>
           </select>
 
           <button type="submit">Encontrar Ponto</button>
         </form>
       </div>
-      <div id="map"></div>
+      
+      <div id="map" style="height: 500px; width: 100%; border-radius: 8px;"></div>
     </div>
+    
     <div class="titulo-ponto">Pontos de coletas próximos</div>
     <div class="box-result">
       <div id="result-list"></div>
     </div>
 
-    <!--<div class="gamificacao-section">
-      <h3>Participe e Ganhe Prêmios!</h3>
-      <p>Ao realizar descartes nos pontos de coleta, você acumula pontos que podem ser trocados por descontos e prêmios
-        exclusivos. Veja como funciona:</p>
-
-      <ul>
-        <li>📦 Faça o descarte correto e acumule <strong>10 pontos</strong> por coleta realizada.</li>
-        <li>🎁 Ao atingir 100 pontos, você pode resgatar descontos em produtos ou serviços.</li>
-        <li>🏆 Pontue mais para desbloquear prêmios especiais, como itens recicláveis reutilizados!</li>
-      </ul>
-
-      <p>Faça seu <a href="/cadastro">cadastro</a> agora e comece a acumular pontos! <strong>Contribua para um mundo
-          mais sustentável e ganhe recompensas.</strong></p>
-    </div>
-
-    <h2>Pontos de Coleta</h2>
-
-
-
-    <h1>Lista de Pontos</h1>
-
-    @if (Model != null && Model.Any())
-    {
-      <table>
-        <tr>
-          <th>@Html.DisplayNameFor(model => model.NomePonto)</th>
-          <th>@Html.DisplayNameFor(model => model.EnderecoPonto)</th>
-          <th>@Html.DisplayNameFor(model => model.CepEndereco)</th>
-          <th>@Html.DisplayNameFor(model => model.UfEndereco)</th>
-          <th>@Html.DisplayNameFor(model => model.CidadeEndereco)</th>
-          <th>@Html.DisplayNameFor(model => model.Latitude)</th>
-          <th>@Html.DisplayNameFor(model => model.Longitude)</th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-          <tr>
-            <td>@Html.DisplayFor(modelItem => item.NomePonto) <a asp-controller="Pontos" asp-action="Descarte" asp-route-idPonto="@item.IdPonto">Descarte aqui</a></td>
-            <td>@Html.DisplayFor(modelItem => item.EnderecoPonto)</td>
-            <td>@Html.DisplayFor(modelItem => item.CepEndereco)</td>
-            <td>@Html.DisplayFor(modelItem => item.UfEndereco)</td>
-            <td>@Html.DisplayFor(modelItem => item.CidadeEndereco)</td>
-            <td>@Html.DisplayFor(modelItem => item.Latitude)</td>
-            <td>@Html.DisplayFor(modelItem => item.Longitude)</td>
-
-          </tr>
-        }
-      </table>
-    }
-    else
-    {
-      <p>Nenhum ponto encontrado.</p>
-    }-->
-    
   </main>
-  <script src="~/js/pontos.js" asp-append-version="true"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn53Otf4ztOb800GW7QXRojwmMgGD-PFA&libraries=places&callback=initMap"
-    async defer></script>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <script src="~/js/pontos.js?v=2" asp-append-version="true"></script>
 </body>
 
 </html>

@@ -1,5 +1,4 @@
 @using EcocriaMVC.Models
-
 @model Pontos
 
 @{
@@ -19,12 +18,12 @@
 <h4>Informe os itens para descarte:</h4>
 <form asp-controller="Pontos" asp-action="RealizarDescarte" method="post">
     <input type="hidden" asp-for="IdPonto" />
+    
     <div class="form-group">
         <label for="quantidade">Quantidade</label>
-    using EcocriaMVC.Models;
-    using EcocriaMVC.Models;
         <input type="number" class="form-control" id="quantidade" name="QuantidadeColeta" min="1" required />
     </div>
+    
     <div class="form-group">
         <label for="ordem">Ordem de Grandeza</label>
         <select class="form-control" id="ordem" name="IdOrdemGrandeza" required>
@@ -33,5 +32,6 @@
             <option value="3">Grande Porte</option>
         </select>
     </div>
+    
     <button type="submit" class="btn btn-success">Descartar</button>
 </form>
